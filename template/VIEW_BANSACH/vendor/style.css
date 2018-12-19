@@ -1,0 +1,748 @@
+
+a{
+    text-decoration: none;
+}
+
+.sanpham li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.sanpham {
+    width: 25%;
+    height: 300px;
+    margin-top: 25px;
+    float: left;
+}
+
+.top_content h5 {
+    margin-top: 10px;
+}
+
+.dg-chitiet {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.chitiet button.btn {
+    margin-right: 20px;
+}
+
+.chitiet li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.chitiet ul {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.img-dt-left {
+    margin-top: 20px;
+}
+
+.splienquan li {
+    list-style-type: none;
+    color: red;
+    font-weight: 700;
+}
+
+.footer-element ul {
+    padding-left: 20px;
+}
+
+.footer-element li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.img-bnsp img {
+    width: 98%;
+    margin: 7px;
+    border-radius: 30px;
+}
+
+.img-bnsp {
+    width: 100%;
+    height: 430px;
+}
+
+.sp-right ul {
+    width: 100%;
+    color: black;
+}
+
+.sp-right {
+    display: -webkit-box;
+    width: 32%;
+}
+
+.sp-left {
+    float: left;
+    width: 66%;
+    height: 100%;
+}
+
+.sp-right li {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+li.giagoc {
+    text-decoration: line-through;
+    color: red;
+}
+
+.sp {
+    width: 42%;
+    height: 36%;
+    margin-left: 20px;
+    padding-top: 7px;
+    display: inline-block;
+}
+
+.sp img {
+    width: 100%;
+    height: 100%;
+}
+
+.khuyenmai img {
+    width: 30%;
+    margin-right: 20px;
+    height: 150px;
+}
+
+.khuyenmai {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.main-menu i.fa.fa-plus {
+    float: right;
+}
+
+.search button {
+    margin-top: -10px;
+    border-radius: 10px;
+}
+
+button.btn.btn.left-20 {
+    margin-left: 35px;
+    background-color: white;
+}
+
+.search input[type="text"] {
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+}
+
+.extra-menu li {
+    list-style-type: none;
+    height: 50px;
+    margin-top: 5px;
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    background-color: #f8f5f152;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.extra-menu {
+    width: 300px;
+    margin-left: 233px;
+    position:relative;
+    z-index: 1;
+}
+.extra-menu ul{
+    position: absolute;
+    margin-top: 10px;
+}
+.menu{width: 21%;height: 301px;float: left;}
+.main-menu {
+    width: 90%;
+    float: left;
+    height: 300px;
+}
+.main-menu a, .extra-menu a{
+    color: black;
+    text-decoration: none;
+}
+.main-menu a:hover, .extra-menu a:hover{
+    text-decoration: none;
+}
+.main-menu li {
+    height: 50px;
+    list-style-type: none;
+    border: 1px solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    padding-top: 12px;
+    /* margin-top: 13px; */
+    box-sizing: border-box;
+}
+
+.main-menu li:hover {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.top-header ul {
+    /* width: 300px; */
+    height: 50px;
+}
+
+.top-header li {
+    float: right;
+    list-style-type: none;
+    margin: 20px;
+    /* left: 700px; */
+    margin-top: 8px;
+}
+
+.top-header h3 {
+    float: left;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.top-header {
+    width: 100%;
+    height: 50px;
+    background: #545b62;
+    border: 1px solid black;
+    color: white;
+}
+.sachtrongnuoc, .sachngoaivan, .dochoi{
+    visibility: hidden;
+}
+.hienthi{
+    visibility: visible;
+}
+.banner{
+    margin-left: -66px;
+    width: 70%;
+    position: relative;
+    padding-left: -20px;
+}
+.banner img{
+    width: 100%;
+    height: 301px;
+    position: absolute;
+    /* padding-left: 20px; */
+}
+.header{
+    width: 100%;
+    height: 400px;
+}
+.content{
+    width: 100%;
+    height: auto;
+}
+.danhmuc {
+    width: 100%;
+    height: 455px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-left: none;
+}
+.sp-header{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    margin-bottom: 4px;
+    border-radius: 4px;
+    font-size: 19px;
+    text-align: center;
+    font-weight: 600;
+}
+.sp a:hover{
+    text-decoration: none;
+}
+.footer{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    background-color: black;
+    color: white;
+}
+.footer-element{
+    width: 30%;
+    height: 80%;
+    display: -webkit-inline-box;
+
+}
+/*-----------------*/
+
+.sanpham ul {
+    width: 100%;
+}
+
+.sanpham img {
+    width: 80%;
+    height: 70%;
+    margin: 0px 20px 10px 26px;
+}
+
+.top_content {
+    width: 70%;
+    margin: auto;
+    margin-top: 41px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+    margin-left: 246px;
+    display: -webkit-box;
+}
+
+.dg-chitiet li {
+    list-style-type: none;
+    margin-top: -10px;
+}
+
+.chitiet input[type="text"] {
+    margin-left: 20px;
+}
+
+.img-dt-left img {
+    margin-left: 37px;
+}
+
+.btnpre {
+    z-index: 4;
+    position: absolute;
+    margin-top: 88px;
+    background-color: white;
+}
+.btnnext {
+    z-index: 4;
+    position: absolute;
+    margin-top: 166px;
+    background-color: white;
+    /* margin-left: 4px; */
+}
+.splienquan ul {
+    text-align: center;
+}
+.head-content{
+    width: 100%;
+    height: 30px;
+}
+.chitiet{
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+}
+.motachitet{
+    overflow: auto;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+    border-right: none;
+    margin-bottom: 30px;
+}
+.danhgia{
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+}
+.ls-splq{
+    height: 350px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+}
+.splienquan{
+    width: 20%;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.splienquan img {
+    width: 100%;
+    height: 220px;
+}
+.toplq{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: large;
+}
+.an{
+    visibility: hidden;
+}   
+.timtheotacgia, .timtheogia, .timtheoNXB, .mg-20{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*------------------------------------------------------------------------*/
+*{margin: 0;padding: 0;}
+
+.btn_sp_click_left {
+    position: absolute;
+    z-index: 4;
+    margin-top: 200px;
+    margin-left: -27px;
+}
+
+.btn_sp_click {
+    position: absolute;
+}
+
+.shc-pttt button.btn.btn-danger {
+    margin-top: 20px;
+}
+
+.shc-tttt {
+    margin: 40px 0px 40px 0px;
+}
+
+.shc-dssp img {
+    width: 79px;
+}
+
+.shc-dssp {
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 39px;
+    margin: 30px 0px 39px 0px;
+}
+
+.shc-ttgh {
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    padding: 17px;
+    border-radius: 34px;
+
+}
+
+.shc-pttt {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 35px;
+    padding: 50px;
+}
+.shc-pttt p {
+    display: -webkit-inline-box;
+}
+.dangky, .dangnhap{
+    margin: 50px;
+    color: #f74904;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.sanpham li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.sanpham {
+    width: 25%;
+    height: 300px;
+    margin-top: 25px;
+    float: left;
+}
+
+.top_content h5 {
+    margin-top: 10px;
+}
+
+.dg-chitiet {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.chitiet button.btn {
+    margin-right: 20px;
+}
+
+.chitiet li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.chitiet ul {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.img-dt-left {
+    margin-top: 20px;
+}
+
+.splienquan li {
+    list-style-type: none;
+    color: red;
+    font-weight: 700;
+}
+
+.footer-element ul {
+    padding-left: 20px;
+}
+
+.footer-element li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+
+/* wertyuiop */
+
+/*-----------------*/
+
+.sanpham ul {
+    width: 100%;
+}
+
+.sanpham img {
+    width: 80%;
+    height: 70%;
+    margin: 0px 20px 10px 26px;
+}
+
+.top_content {
+    width: 70%;
+    margin: auto;
+    margin-top: 41px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+    margin-left: 246px;
+    display: -webkit-box;
+}
+
+.dg-chitiet li {
+    list-style-type: none;
+    margin-top: -10px;
+}
+
+.chitiet input[type="text"] {
+    margin-left: 20px;
+}
+
+.img-dt-left img {
+    margin-left: 37px;
+}
+
+.btnpre {
+    z-index: 4;
+    position: absolute;
+    margin-top: 88px;
+    background-color: white;
+}
+.btnnext {
+    z-index: 4;
+    position: absolute;
+    margin-top: 166px;
+    background-color: white;
+    /* margin-left: 4px; */
+}
+.splienquan ul {
+    text-align: center;
+}
+.head-content{
+    width: 100%;
+    height: 30px;
+}
+.chitiet{
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+}
+.motachitet{
+    overflow: auto;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+    border-right: none;
+    margin-bottom: 30px;
+}
+.danhgia{
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+}
+.ls-splq{
+    height: 350px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+}
+.splienquan{
+    width: 20%;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.splienquan img {
+    width: 100%;
+    height: 220px;
+}
+.toplq{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 4px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: large;
+}
+.an{
+    visibility: hidden;
+}   
+.timtheotacgia, .timtheogia, .timtheoNXB, .mg-20{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*------------------------------------------------------------------------*/
+
+
+.spnb_list {
+    height: 500px;
+    margin-top: 10px;
+}
+
+.btn_sp_click_left {
+    position: absolute;
+    z-index: 4;
+    margin-top: 200px;
+    margin-left: -27px;
+}
+
+.btn_sp_click {
+    position: absolute;
+}
+
+.shc-pttt button.btn.btn-danger {
+    margin-top: 20px;
+}
+
+.shc-tttt {
+    margin: 40px 0px 40px 0px;
+}
+
+.shc-dssp img {
+    width: 79px;
+}
+
+.shc-dssp {
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 39px;
+    margin: 30px 0px 39px 0px;
+}
+
+.shc-ttgh {
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    padding: 17px;
+    border-radius: 34px;
+
+}
+
+.shc-pttt {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 35px;
+    padding: 50px;
+}
+.shc-pttt p {
+    display: -webkit-inline-box;
+}
+.btn_sp_click_right{
+    position: absolute;
+}
+/* -------css dang ky-------- */
+*{margin: 0;padding: 0;}
+.model_content {
+    width: 40%;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgba(128, 128, 128, 0.671);
+    border-radius: 35px;
+    position: absolute;
+    margin: 50px 0 0 0;
+    z-index: 10000;
+
+}
+.model_container, .model_container_login{
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0px;
+    justify-content: center;
+}
+.tat{
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.mgt-30{
+    margin-top: 30px;
+}
+.giohang{
+    width: 100px;
+    height: 60px;
+    margin-left: 20px; 
+    cursor: pointer;
+    background-image:url('../img/icon/clipart-shopping-cart-256x256-9d6b.png');
+}
+.giohang img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 20px; 
+}
+.sl_giohang  {
+    width: 30px;
+    height: 30px;
+    background-color: #09e1f0;
+    z-index: 3;
+    margin: -1.5px 0 0 5px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px; 
+}
+.model_login,.model_signin{
+    cursor: pointer;
+}
