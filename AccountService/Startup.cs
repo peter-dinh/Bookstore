@@ -12,6 +12,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AccountService.Models;
 using Microsoft.EntityFrameworkCore;
+using AccountService.Repository;
+using Microsoft.IdentityModel.Tokens;
+using System.Reflection.Metadata;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace AccountService
 {
@@ -43,30 +47,8 @@ namespace AccountService
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.ASCII.GetBytes(Constant.SecretSercurityKey)),
-
-                    ValidateIssuer = true,
-                    ValidIssuer = Configuration["TokenAuthentication:siteUrl"],
-
-                    ValidateAudience = true,
-                    ValidAudience = Configuration["TokenAuthentication:siteUrl"],
-
-                    ValidateLifetime = true,
-                };
-            });services.AddAuthentication(o =>
-            {
-                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.Audience = Configuration["TokenAuthentication:siteUrl"];
-                options.RequireHttpsMetadata = false;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.ASCII.GetBytes(Constant.SecretSercurityKey)),
+                    // ValidateIssuerSigningKey = true,
+                    // IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.ASCII.GetBytes(Constant.SecretSercurityKey)),
 
                     ValidateIssuer = true,
                     ValidIssuer = Configuration["TokenAuthentication:siteUrl"],

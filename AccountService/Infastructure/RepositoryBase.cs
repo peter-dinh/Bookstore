@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Product_Services.Models;
+using AccountService.Models;
 
-namespace Product_Services.Infastructure
+namespace AccountService.Infastructure
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly Product_Context context;  
+        private readonly AccountContext context;  
         private DbSet < T > entities;  
         string errorMessage = string.Empty;  
-        public Repository(Product_Context context) {  
+        public Repository(AccountContext context) {  
             this.context = context;  
             entities = context.Set < T > ();  
         }  

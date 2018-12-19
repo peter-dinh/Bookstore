@@ -16,6 +16,9 @@ namespace Product_Services.Models
         public DbSet<Product_Category> Product_Categories { get; set; }
         public DbSet<Product_Image> Product_Images { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Cart> Carts {get; set;}
+        public DbSet<CartItem> CartItems {get; set;}
+        public DbSet<Account> Accounts {get; set;}
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Product_Image>()
@@ -34,6 +37,15 @@ namespace Product_Services.Models
            .Property(p => p.Id)
            .ValueGeneratedOnAdd();
             builder.Entity<Category>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+            builder.Entity<Cart>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+            builder.Entity<CartItem>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+            builder.Entity<Account>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
         }

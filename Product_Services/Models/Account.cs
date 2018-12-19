@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AccountService.Models
+namespace Product_Services.Models
 {
     public class Account{
         [Key]
@@ -12,6 +12,7 @@ namespace AccountService.Models
         [Required]
         [StringLength(50), DataType("varchar")]   
         public string Username { get; set; }
+        public string Password {get; set;}
         public string AccountName { get; set; }
         public string AccountType{get;set;}
 

@@ -126,6 +126,7 @@ namespace Product_Services.Controllers
             }
             return Ok("Success");
         }
+        
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody]JObject data)
         {

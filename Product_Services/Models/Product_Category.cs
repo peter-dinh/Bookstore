@@ -13,7 +13,7 @@ namespace Product_Services.Models
         [Required(ErrorMessage = "Product is required")]
         public int ProductID{get;set;}
         [ForeignKey("Category")]
-        [Required(ErrorMessage = "Username is required")]
+        [Required(ErrorMessage = "Category is required")]
         public int CategoryID{get;set;}
         public virtual Product Product { get; set; }
         public virtual Category Category {get;set;}

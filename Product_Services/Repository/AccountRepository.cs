@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using AccountService.Infastructure;
-using AccountService.Models;
+using Product_Services.Infastructure;
+using Product_Services.Models;
 
-namespace AccountService.Repository
+namespace Product_Services.Repository
 {
     public interface IAccountRepository : IRepository<Account>
     {
@@ -14,8 +14,8 @@ namespace AccountService.Repository
     }
     public class AccountRepository : Repository<Account>, IAccountRepository
     {
-        AccountContext _Context;
-        public AccountRepository(AccountContext context) : base(context)
+        Product_Context _Context;
+        public AccountRepository(Product_Context context) : base(context)
         {
             _Context = context;
         }

@@ -2,18 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Product_Services.Models
 {
-    public class Discount
+    public class CartItem
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id{get;set;}
+        [ForeignKey("Cart")]
+        [Required(ErrorMessage = "Cart is required")]
+        public int CartID { get; set; }
         [ForeignKey("Product")]
         [Required(ErrorMessage = "Product is required")]
-        public int ProductID { get; set; }
-        public int percent{get;set;}
-        public Boolean Active{get;set;}
-        public virtual Product Product { get; set; }
+        public int ProductID {get; set;}
+        public int Quantity {get; set;}
+        public int Price {get; set;}
+        public int Discount {get; set;}
     }
 }

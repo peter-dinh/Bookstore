@@ -1,12 +1,12 @@
-using Product_Services.Models;
+using AccountService.Models;
 
-namespace Product_Services.Infastructure
+namespace AccountService.Infastructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public Product_Context Context { get; }
+        public AccountContext Context { get; }
 
-        public UnitOfWork(Product_Context context)
+        public UnitOfWork(AccountContext context)
         {
             Context = context;
         }

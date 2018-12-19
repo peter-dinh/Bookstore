@@ -39,6 +39,8 @@ namespace Product_Services
             services.AddTransient<IDiscountRepository, DiscountRepository>();
             services.AddTransient<IImageRepository, ImageRepository>();
             services.AddTransient<IProduct_ImageRepository, Product_ImageRepository>();
+            services.AddTransient<ICartRepository, CartRepository>();
+            services.AddTransient<ICartItemRepository, CartItemRepository>();
             services.AddDbContext<Product_Context>(options => options.UseSqlServer(connString));
             services.AddSession();
         }

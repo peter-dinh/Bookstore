@@ -1,10 +1,10 @@
 using System;
-using Product_Services.Models;
-namespace Product_Services.Infastructure
+using AccountService.Models;
+namespace AccountService.Infastructure
 {
     public interface IUnitOfWork : IDisposable
     {
-        Product_Context Context { get; }
+        AccountContext Context { get; }
         void Commit();
     }
 }
