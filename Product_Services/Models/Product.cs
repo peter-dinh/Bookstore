@@ -14,6 +14,7 @@ namespace Product_Services.Models
         public string Detail {get;set;}
         public string Languge{get;set;}
         public int Price {get; set;}
+        public int Discount {get;set;}
         public int Quantity { get; set; }
         public String Author {get;set;}
         public Boolean Is_Active {get;set;}

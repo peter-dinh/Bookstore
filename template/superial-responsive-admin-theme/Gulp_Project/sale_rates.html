@@ -1,0 +1,327 @@
+  @@include('./_header.html', {
+    "title": "Commerce"
+  })
+ <link href="lib/dataTable/css/jquery.dataTables.css" rel="stylesheet">
+@@include('./_startConteiner.html') 	
+<div id="mainWrapper" class="mainConteiner column">
+	<!--start nainconteiner-->
+	<div class="mainConteinerConten">
+		<div class="container-fluid footerfix">
+			<div class="row firstRow">
+				<!--row firstRow-->
+				<div class="col-lg-9  col-md-8  col-sm-7">
+					<div class="firstRowHeader">
+						<h5>SALE RATES</h5>
+					</div>
+					<ol class="breadcrumb">
+						<li><a href="index.html">Home</a></li>
+						<li><a>E-commerce</a></li>
+						<li class="active">Sale Rates</li>
+					</ol>
+				</div>
+				<!--firstRowHeader-->
+				<div class="col-lg-3   col-md-4  col-sm-5">
+					<div class="miniDiagramsConteiner">
+						<div class="miniDiagramsContent">
+							<div class="miniDiagramsContentHeader">
+								1290 items
+							</div>
+							<!--miniDiagramsContentHeader-->
+							<div class="miniDiagramsContentContent">
+								<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+							</div>
+							<!--miniDiagramsContentContent-->
+						</div>
+						<!--miniDiagramsContent-->
+						<div class="miniDiagramsContent">
+							<div class="miniDiagramsContentHeader">
+								$30,00 revenue
+							</div>
+							<!--miniDiagramsContentHeader-->
+							<div class="miniDiagramsContentContent">
+								<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+							</div>
+							<!--miniDiagramsContentContent-->
+						</div>
+						<!--miniDiagramsContent-->
+					</div>
+					<!--miniDiagramsConteiner-->
+				</div>
+			</div>
+			<!--	MEIN CONTENT  -->
+			<div class="row">
+				<div class="col-lg-8 ">
+					<div class="panel panel-default colorTheme">
+						<div class="panel-heading clearfix">
+							<div class="panel-heading-title pull-left">
+								<h6>ACTIVITY</h6>
+							</div>
+							<!--panel-heading-title-->
+							<div class="panel-heading-buttons pull-right">
+								<div class="bs-example">
+									<p class="clearfix">
+										<button class="btn btn-defult remove"> <i class="fa fa-times"></i></button>
+								</div>
+							</div>
+							<!--panel-heading-buttons-->
+						</div>
+						<!--panel-->
+						<div class="panel-body">
+							<canvas id="chartDashboard10"></canvas>
+						</div>
+					</div>
+					<!--panel-body-->
+				</div>
+				<div class="col-lg-4 ">
+					<div class="panel panel-default ">
+						<!--panel-->
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="indicators colorCyan">
+										<span>529</span>
+										<br>some text
+										<i class="fa fa-cloud-download"></i>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="indicators colorTheme">
+										<span>529</span>
+										<br>some text
+										<i class="fa fa-cloud-download"></i>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="indicators colorTheme">
+										<span>529</span>
+										<br>some text
+										<i class="fa fa-cloud-download"></i>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="indicators colorCyan">
+										<span>529</span>
+										<br>some text
+										<i class="fa fa-cloud-download"></i>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 ">
+									<div class="indicators clearfix  colorCyan">
+										<div class="row">
+											<div class="col-md-6">
+												<div id="sparkline22" class="indicatorsCharts">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="indicatorsContent">
+													<span>529</span>
+													<br>some text
+													<i class="fa fa-cloud-download"></i>
+												</div>
+												<!--	indicatorsContent-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--panel-body-->
+				</div>
+			</div>
+			<!--row-->
+			<div id="spy" class="row">
+						<div class="col-md-12 ">
+							<div class="panel panel-default ">
+								<div class="panel-heading clearfix">
+									<div class="panel-heading-title pull-left">
+										<h6>SALE RATE</h6>
+									</div>
+									<!--panel-heading-title-->
+									<div class="panel-heading-buttons pull-right">
+										<div class="bs-example">
+											<p class="clearfix">
+												<button class="btn remove"> <i class="fa fa-times"></i></button>
+										</div>
+									</div>
+									<!--panel-heading-buttons-->
+								</div>
+								<!--panel-->
+								<div class="panel-body-widget saleRateContent">
+									<div class="panelMenu">
+										<ul>
+											<li><a href="#" class="activePanelMenu">Day</a></li>
+											<li><a href="#">Month</a></li>
+											<li><a href="#">Year</a></li>
+										</ul>
+									</div>
+									<div class="panelBodyContentChart  day  panelBodyContentActive">
+
+									
+										<div class="panelBodyContentMain">
+										
+											<div class="chartPlaseholder">
+												
+											
+										<div id="placeholder11"></div>
+										
+										
+											</div>
+										</div>
+										<!--panelBodyContentMain-->
+									</div>
+									
+									<!--panelBodyContent-->
+									<div class="panelBodyContentChart month">
+										<div class="panelBodyContentMain">
+											<div class="chartPlaseholder">
+												<div id="placeholder12"></div>
+											</div>
+										</div>
+										<!--panelBodyContentMain-->
+									</div>
+									<!--panelBodyContent-->
+									<div class="panelBodyContentChart year">
+										<div class="panelBodyContentMain">
+											<div class="chartPlaseholder">
+												<div id="placeholder13"></div>
+											</div>
+										</div>
+										<!--panelBodyContentMain-->
+									</div>
+									<!--panelBodyContent-->
+									<!--saleRateContent-->
+									<div class="saleRateFooter">
+										<ul>
+											<li><span class="sale1 saleIndigo">$157,182</span>
+												<br/><span>Total Earnings</span></li>
+											<li><span class="sale1">$38,952</span>
+												<br/><span>Revenue</span></li>
+											<li><span class="sale1">+800k</span>
+												<br/><span>New Customers</span></li>
+										</ul>
+										<div class="saleRateButtonPlaseholder">
+											<button type="button" class="btn btn-danger buttonsRounded float-button-light"><i class="fa fa-line-chart"></i></button>
+										</div>
+									</div>
+									<!--antConteinerFooter-->
+									<!--antConteinerFooter-->
+								</div>
+							</div>
+							<!--panel-body-->
+						</div>
+					</div>
+					<!--row-->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body topSellingHeader">
+							<br>
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+											<li><a href="#">Top Selling </a></li>
+											<li><a href="#">Most Viewed </a></li>
+											<li><a href="#">New Customer </a></li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orders <span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="#">One more separated link</a></li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="nav navbar-nav navbar-right">
+											<li class="active"><a href="#">WEEK <span class="sr-only">(current)</span></a></li>
+											<li><a href="#">MONTH</a></li>
+											<li><a href="#">YEAR</a></li>
+										</ul>
+									</div>
+									<!-- /.navbar-collapse -->
+								</div>
+								<!-- /.container-fluid -->
+							</nav>
+							<br>
+							<div class="table-responsive">
+								<table id="example" class="display tableWrapper">
+									<thead>
+										<tr>
+											<th class="prodName">Product Name</th>
+											<th class="prise">Price</th>
+											<th class="sold">Sold</th>
+											<th class="marker"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="prodName">MacBook Pro</td>
+											<td class="prise">$ 3,600.00</td>
+											<td class="sold">502</td>
+											<td class="marker">
+												<button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="prodName">iMac</td>
+											<td class="prise">$ 1,600.00</td>
+											<td class="sold">123</td>
+											<td class="marker">
+												<button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="prodName">iPad</td>
+											<td class="prise">$ 600.00</td>
+											<td class="sold">45</td>
+											<td class="marker">
+												<button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="prodName">iPhone</td>
+											<td class="prise">$ 300.00</td>
+											<td class="sold">65</td>
+											<td class="marker">
+												<button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--row-->
+			<!--MEIN CONTENT -->
+@@include('./_stopConteiner.html') 		
+<script type="text/javascript" src="lib/chartjs/chart.js"></script>
+<script type="text/javascript" src="lib/flotChart/jquery.flot.js"></script>
+<script type="text/javascript" src="lib/flotChart/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="lib/flotChart/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/chartCommerce.js"></script>
+<script type="text/javascript" src="js/commerceFunctions.js"></script>
+<script type="text/javascript" src="lib/dataTable/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTableFunctions.js"></script>
+@@include('./_footer.html') 

@@ -1,0 +1,381 @@
+  @@include('./_header.html', {
+    "title": "Order view"
+  })
+   <link href="lib/dataTable/css/jquery.dataTables.css" rel="stylesheet">
+  @@include('./_startConteiner.html') 	
+ 
+               
+<div id="mainWrapper" class="mainConteiner column">
+    <!--start nainconteiner-->
+    <div class="mainConteinerConten">
+        <div class="container-fluid footerfix">
+            <div class="row firstRow">
+                <!--row firstRow-->
+                <div class="col-lg-9  col-md-8  col-sm-7">
+                    <div class="firstRowHeader">
+                        <h5>ORDER VIEW</h5>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a>E-commerce</a></li>
+                        <li class="active">Order view</li>
+                    </ol>
+                </div>
+                <!--firstRowHeader-->
+                <div class="col-lg-3   col-md-4  col-sm-5">
+                    <div class="miniDiagramsConteiner">
+                        <div class="miniDiagramsContent">
+                            <div class="miniDiagramsContentHeader">
+                                1290 items
+                            </div>
+                            <!--miniDiagramsContentHeader-->
+                            <div class="miniDiagramsContentContent">
+                                <span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+                            </div>
+                            <!--miniDiagramsContentContent-->
+                        </div>
+                        <!--miniDiagramsContent-->
+                        <div class="miniDiagramsContent">
+                            <div class="miniDiagramsContentHeader">
+                                $30,00 revenue
+                            </div>
+                            <!--miniDiagramsContentHeader-->
+                            <div class="miniDiagramsContentContent">
+                                <span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+                            </div>
+                            <!--miniDiagramsContentContent-->
+                        </div>
+                        <!--miniDiagramsContent-->
+                    </div>
+                    <!--miniDiagramsConteiner-->
+                </div>
+            </div>
+            <!--	MEIN CONTENT  -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="antBoxIndigo">
+                        <div class="orderVievHeader">
+                            <h6>ORDER DETAILS</h6>
+                            <button type="button" class="btn btn-danger buttonsRectangular float-button-light"><i class="fa fa-pencil"></i></button>
+                        </div>
+                        <!--orderVievHeader-->
+                        <div class="table-responsive orderVievTable">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Order #:</td>
+                                        <td>12313232 &nbsp;
+                                            <button type="button" class="btn btn-success btn-df float-button-light">Email confirmation was sent</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Order Date and Time:</td>
+                                        <td>Dec 27, 2013 7:16:25 PM </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Order Status: </td>
+                                        <td>
+                                            <button type="button" class="btn btn-success btn-df float-button-light">Closed</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Grand Total: </td>
+                                        <td>$175.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Payment Information:</td>
+                                        <td>Credit Card </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--table-responsive-->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="antBoxIndigo">
+                        <div class="orderVievHeader">
+                            <h6>Customer Information CUSTOMER INFORMATION</h6>
+                            <button type="button" class="btn btn-danger buttonsRectangular float-button-light"><i class="fa fa-pencil"></i></button>
+                        </div>
+                        <!--orderVievHeader-->
+                        <div class="table-responsive orderVievTable">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Customer Name:</td>
+                                        <td>Jhon Doe</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Email:</td>
+                                        <td>jhon@doe.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">State:</td>
+                                        <td>New York</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="orderVievTableFirstCol">Phone Number:</td>
+                                        <td>+3 8 093 456 45 45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--table-responsive-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="antBoxIndigo">
+                        <div class="orderVievHeader">
+                            <h6>BILLING ADDRESS</h6>
+                            <button type="button" class="btn btn-danger buttonsRectangular float-button-light"><i class="fa fa-pencil"></i></button>
+                        </div>
+                        <!--orderVievHeader-->
+                        <div class="orderVievWrapper">
+                            <address>
+<strong>Jhon Done</strong><br>
+#24 Park Avenue Str<br>
+New York<br>
+Connecticut, 23456 New York<br>
+United States<br>
+<abbr title="Phone">P:</abbr> 123123232<br>
+<abbr title="Phone">F:</abbr> 231231232
+</address>
+                        </div>
+                        <!--orderVievWrapper-->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="antBoxIndigo">
+                        <div class="orderVievHeader">
+                            <h6>SHIPPING ADDRESS</h6>
+                            <button type="button" class="btn btn-danger buttonsRectangular float-button-light"><i class="fa fa-pencil"></i></button>
+
+                        </div>
+                        <!--orderVievHeader-->
+                        <div class="orderVievWrapper">
+                            <address>
+
+<strong>Jhon Done</strong><br>
+#24 Park Avenue Str<br>
+New York<br>
+Connecticut, 23456 New York<br>
+United States<br>
+<abbr title="Phone">P:</abbr> 123123232<br>
+<abbr title="Phone">F:</abbr> 231231232
+</address>
+                        </div>
+                        <!--orderVievWrapper-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body topSellingHeader">
+                            <br>
+                            <br>
+                            <div class="dataTableWrapper">
+                                <table id="example" class="display tableWrapper">
+                                    <thead>
+                                        <tr class="selectedTableHeader">
+                                            <td class="selectedTableInputBox">Product</td>
+                                            <td class="selectedTableInputBox">Purcahsed On</td>
+                                            <td class="selectedTableInputBox">Original Price</td>
+                                            <td class="selectedTableInputBox">Price</td>
+                                            <td class="selectedTableInputBox">Quantity</td>
+                                            <td class="selectedTableInputBox">Tax Amound</td>
+                                            <td class="selectedTableInputBox">Tax Percent</td>
+                                            <td class="selectedTableInputBox">Discount Amound
+                                                </td>
+                                                    <td class="selectedTableInputBox">Total</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Product 1</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>12.09.2015</td>
+                                            <td>$ 1800</td>
+                                            <td>Test Customer2</td>
+                                            <td>$ 3,600.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 2,600.00</td>
+                                            <td>$ 1,500.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 2</td>
+                                            <td class="text-center"><span class="label label-default colorPink">Closed</span></td>
+                                            <td>13.09.2015</td>
+                                            <td>$ 2200</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,700.00</td>
+                                            <td>13 %</td>
+                                            <td>$ 4,100.00</td>
+                                            <td>$ 5,300.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 3</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>15.09.2015</td>
+                                            <td>$ 2600</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,700.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 2,600.00</td>
+                                            <td>$ 3,300.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 4</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>16.09.2015</td>
+                                            <td>$ 2300</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 2,700.00</td>
+                                            <td>13 %</td>
+                                            <td>$ 1,300.00</td>
+                                            <td>$ 2,800.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 5</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>17.09.2015</td>
+                                            <td>$ 3000</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,700.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 2,200.00</td>
+                                            <td>$ 1,900.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 6</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>18.09.2015</td>
+                                            <td>$ 1900</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,400.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 2,500.00</td>
+                                            <td>$ 2,400.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 7</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>19.09.2015</td>
+                                            <td>$ 800</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,600.00</td>
+                                            <td>13 %</td>
+                                            <td>$ 1,800.00</td>
+                                            <td>$ 2,100.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 8</td>
+                                            <td class="text-center"><span class="label label-default colorPink">Closed</span></td>
+                                            <td>20.09.2015</td>
+                                            <td>$ 1200</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,600.00</td>
+                                            <td>13 %</td>
+                                            <td>$ 2,100.00</td>
+                                            <td>$ 1,900.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 9</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>21.09.2015</td>
+                                            <td>$ 3000</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,400.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 2,100.00</td>
+                                            <td>$ 1,900.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 10</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>22.09.2015</td>
+                                            <td>$ 2400</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,100.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 1,900.00</td>
+                                            <td>$ 2,400.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 11</td>
+                                            <td class="text-center"><span class="label label-default colorYellow">On Hold</span></td>
+                                            <td>23.09.2015</td>
+                                            <td>$ 1600</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,600.00</td>
+                                            <td>13 %</td>
+                                            <td>$ 1,400.00</td>
+                                            <td>$ 2,100.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product 12</td>
+                                            <td class="text-center"><span class="label label-default colorPink">Closed</span></td>
+                                            <td>24.09.2015</td>
+                                            <td>$ 1500</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,400.00</td>
+                                            <td>15 %</td>
+                                            <td>$ 1,800.00</td>
+                                            <td>$ 2,900.00</td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                   </div>
+                                <br>
+                                <div class="subTotalWrapper clerfix">
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Sub Total:</span>
+                                        <span class="pull-right">$1,124.50</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Shipping:</span>
+                                        <span class="pull-right">$40.50</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Grand Total:</span>
+                                        <span class="pull-right">$1,260.00</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Total Paid:</span>
+                                        <span class="pull-right">$1,260.00</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Total Refunded:</span>
+                                        <span class="pull-right">$0.00</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                    <div class="subTotalAnt">
+                                        <span class="subTotalAntHeader">Total Due:</span>
+                                        <span class="pull-right">$1,124.50</span>
+                                    </div>
+                                    <!--	subTotalAnt-->
+                                </div>
+                                <!--subTotalWrapper-->
+                                <br>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--row-->
+            <!--MEIN CONTENT-->
+														
+@@include('./_stopConteiner.html') 		
+
+<script type="text/javascript" src="lib/dataTable/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTableFunctions.js"></script>
+<script type="text/javascript" src="js/orderviewFunctions.js"></script>
+
+@@include('./_footer.html') 

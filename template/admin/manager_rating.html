@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="bootstrap admin template">
+	<meta name="author" content="">
+
+	<title>BookStore | Product</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="css/scss/style.min.css" rel="stylesheet">
+	<link href="lib/expandingSearchBar/component.css" rel="stylesheet">
+	<link href="lib/customScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="lib/hover/hover.css" rel="stylesheet">
+	<link href="lib/waves/waves.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />   
+	
+    <link href="lib/dataTable/css/jquery.dataTables.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="lib/html5shiv/html5shiv.min.js"></script>
+		<script src="lib/respondjs/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="la-ball-pulse la-2x">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<header>
+		<div id="headerMain">
+			<div id="header">
+				<div class="nawbarMain  headerWrapper clearfix">
+					<div class="nawbarMainLeft ">
+						<div class="mainLogo">
+						</div>
+						<!--mainLogo-->
+						<div class="nawbarMainButtonWrapper">
+							<button id="menuIcon" class="hamburger">
+								<span></span>
+							</button>
+						</div>
+						<div class="headerLogo">
+							<a href="index.html">Book Store</a>
+						</div>
+						<!--headerLogo-->
+					</div>
+					<!--nawbarMainLeft-->
+					<div class="latestActivity">
+						<div class="latestActivityHeader colorCyan clearfix">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-calendar"></i></span><span class="mainContent">latest activity</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closelatestActivity pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						
+					</div>
+					<!--latestActivity-->
+
+					<!--reminderShow-->
+				</div>
+				<!--nawbarMain-->
+			</div>
+			<!--header-->
+		</div>
+		<!--headerMain -->
+	</header>
+
+	<div class="mainWrapper">
+		<div id="sideBarWrapper">
+			<div id="sideBarContent">
+				<div id="bar" class="sideBar sideBarDark">
+					
+					<div id="menuContent">
+						<div id="menuSize">
+							<aside class="sidebar">
+								<nav class="sidebar-nav">
+									<ul class="metismenu" id="menu">
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Tổng quan</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Quản lý sản phẩm</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="chartjs.html">
+                                                      Sản phẩm
+                                                    </a>
+												</li>
+												<li>
+													<a href="flotchart.html">
+                                                    Thể loại
+                                                    </a>
+												</li>
+												<li>
+													<a href="morrischart.html">
+                                                    Đánh giá <span class="badge colorCyan pull-right">3</span>
+                                                    </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="gallery.html"><span class="glyphicon glyphicon-camera"></span>
+                                            Quản lý đơn hàng
+                                            </a>
+										</li>
+										
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Quản lý kho</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="typography.html">
+                                                        Kho
+                                                    </a>
+												</li>
+												<li>
+													<a href="tables.html">
+                                                        Phiếu xuất
+                                                    </a>
+												</li>
+												<li>
+													<a href="datatables.html">
+                                                        Phiếu nhập
+                                                    </a>
+												</li>
+											</ul>
+											<li>
+
+												<a href="calendar.html"><span class="glyphicon glyphicon-calendar"></span>
+                                                Quản lý tài khoản
+                                            </a>
+											</li>
+											<li>
+												<a href="registration.html"><span class="glyphicon glyphicon-check"></span>
+                                                Cài đặt
+                                            </a>
+											</li>
+									</ul>
+								</nav>
+							</aside>
+						</div>
+						<!--menuSize-->
+					</div>
+					<!--	menuContent-->
+
+
+					<div class="timeWrapper colorTheme">
+						<div class="menuTime2">
+							<span class="current-time2"></span>
+						</div>
+						<div class="menuTime">
+							<span class="current-time"></span>
+						</div>
+					</div>
+				</div>
+				<!--menuSize-->
+			</div>
+			<!--sideBar-->
+		</div>
+		<!--sideBarContent-->
+	</div>
+	<!--sideBarWrapper-->
+	<div id="mainWrapper" class="mainConteiner column">
+		<!--start nainconteiner-->
+		<div class="mainConteinerConten">
+			<div class="container-fluid footerfix">
+				<div class="row firstRow">
+					<!--row firstRow-->
+					<div class="col-lg-9  col-md-8  col-sm-7">
+						<div class="firstRowHeader">
+							<h5>DASHBOARD</h5>
+						</div>
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a>Dashboards</a></li>
+							<li class="active">Dashboard</li>
+						</ol>
+					</div>
+					<!--firstRowHeader-->
+					
+                </div>
+                <!--	MEIN CONTENT  -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <div class="panel-heading-title pull-left">
+                            <h6>Danh sách sản phẩm</h6>
+                        </div>
+                        <!--panel-heading-title-->
+                        <div class="panel-heading-buttons pull-right">
+                            <div class="bs-example">
+                                <ul class="clearfix">
+                                    <li class="btn btn-defult remove"> <i class="fa fa-times"></i></li>
+                                    <li class="btn btn-defult  fullScreen"> <i class="fa fa-expand"></i> </li>
+                                    <li class=" btn btn-defult dropdown">
+                                        <a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-cog"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="drop">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--panel-heading-buttons-->
+                    </div>
+                    <!--panel-->
+                    <div class="panel-body">
+                        <div class="dataTableWrapper">
+                            <table id="example1" class="display tableWrapper">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!--	MEIN CONTENT  -->
+
+			</div>
+			<!--container-fluid-->
+		</div>
+		<!--mainConteinerConten-->
+		<div class="fotterWrapper">
+			© 2015 Copyright.
+		</div>
+		<!--fotterWrapper-->
+	</div>
+	<!--mainConteinerConten-->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/sparklineChart/sparkline.min.js"></script>
+    <script type="text/javascript" src="lib/sparklineChart/sparklineant.js"></script>
+
+    <script type="text/javascript" src="lib/expandingSearchBar/classie.js"></script>
+    <script type="text/javascript" src="lib/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="lib/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="lib/metisMenu/metisMenu.min.js"></script>
+    <script type="text/javascript" src="lib/momentjs/moment.min.js"></script>
+    <script type="text/javascript" src="lib/waves/waves.min.js"></script> 		
+    <script type="text/javascript" src="lib/dataTable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTableFunctions.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>

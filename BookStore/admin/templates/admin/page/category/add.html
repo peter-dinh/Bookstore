@@ -1,0 +1,59 @@
+{% extends "admin/base.html" %}
+{% load staticfiles %}
+{% block title %}
+Thêm thể loại
+{% endblock %}
+
+{% block header %}
+<div class="col-lg-9  col-md-8  col-sm-7">
+    <div class="firstRowHeader">
+        <h5>Thêm thể loại</h5>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="/admin">Trang chủ</a></li>
+        <li><a href="/admin/manager_product">Thể loại</a></li>
+        <li class="active">Thêm thể loại</li>
+    </ol>
+</div>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-12 ">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <div class="panel-heading-title pull-left">
+                    <h6>Thêm thể loại</h6>
+                </div>
+                <!--panel-heading-title-->
+                <div class="panel-heading-buttons pull-right">
+                    <div class="bs-example">
+                        
+                    </div>
+                </div>
+                <!--panel-heading-buttons-->
+            </div>
+            <!--panel-->
+            <div class="panel-body">
+                <div class="row inputWrapper ">
+                    <label>Tên thể loại:</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <button type="button" class="btn btn-primary">Thêm thể loại</button>
+        <!--panel-body-->
+    </div>
+</div>
+{% endblock %}
+{% block link_css %}
+<link href="{% static 'admin/lib/dataTable/css/jquery.dataTables.css' %}" rel="stylesheet">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="{% static 'admin/lib/dataTable/js/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/js/dataTableFunctions.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/js/functions.js' %}"></script>
+{% endblock %}

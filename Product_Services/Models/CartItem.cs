@@ -19,5 +19,8 @@ namespace Product_Services.Models
         public int Quantity {get; set;}
         public int Price {get; set;}
         public int Discount {get; set;}
+
+        public virtual ICollection<Product> Products { get; set; } 
+        public virtual ICollection<Cart> Carts { get; set; } 
     }
 }

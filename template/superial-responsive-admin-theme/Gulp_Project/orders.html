@@ -1,0 +1,309 @@
+  @@include('./_header.html', {
+    "title": "Orders"
+  })
+   
+	<link href="lib/icheck/skins/all.css" rel="stylesheet">
+    <link href="lib/dataTable/css/jquery.dataTables.css" rel="stylesheet">
+
+@@include('./_startConteiner.html') 	
+         
+<div id="mainWrapper" class="mainConteiner column">
+    <!--start nainconteiner-->
+    <div class="mainConteinerConten">
+        <div class="container-fluid footerfix">
+            <div class="row firstRow">
+                <!--row firstRow-->
+                <div class="col-lg-9  col-md-8  col-sm-7">
+                    <div class="firstRowHeader">
+                        <h5>ORDERS</h5>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a>E-commerce</a></li>
+                        <li class="active">Orders</li>
+                    </ol>
+                </div>
+                <!--firstRowHeader-->
+                <div class="col-lg-3   col-md-4  col-sm-5">
+                    <div class="miniDiagramsConteiner">
+                        <div class="miniDiagramsContent">
+                            <div class="miniDiagramsContentHeader">
+                                1290 items
+                            </div>
+                            <!--miniDiagramsContentHeader-->
+                            <div class="miniDiagramsContentContent">
+                                <span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+                            </div>
+                            <!--miniDiagramsContentContent-->
+                        </div>
+                        <!--miniDiagramsContent-->
+                        <div class="miniDiagramsContent">
+                            <div class="miniDiagramsContentHeader">
+                                $30,00 revenue
+                            </div>
+                            <!--miniDiagramsContentHeader-->
+                            <div class="miniDiagramsContentContent">
+                                <span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+                            </div>
+                            <!--miniDiagramsContentContent-->
+                        </div>
+                        <!--miniDiagramsContent-->
+                    </div>
+                    <!--miniDiagramsConteiner-->
+                </div>
+            </div>
+            <!--	MEIN CONTENT  -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body topSellingHeader">
+                            <br>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="#">Top Selling </a></li>
+                                            <li><a href="#">Most Viewed </a></li>
+                                            <li><a href="#">New Customer </a></li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orders <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">One more separated link</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li class="active"><a href="#">WEEK <span class="sr-only">(current)</span></a></li>
+                                            <li><a href="#">MONTH</a></li>
+                                            <li><a href="#">YEAR</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.navbar-collapse -->
+                                </div>
+                                <!-- /.container-fluid -->
+                            </nav>
+                            <br>
+                            <br>
+                            <div class="table-responsive">
+                                <table id="example" class="display tableWrapper">
+                                    <thead>
+                                        <tr class="selectedTableHeader">
+                                            <td class="selectedTableInputBox"></td>
+                                            <td class="selectedTableOrders">Orders</td>
+                                            <td class="selectedTablePurcahsed">Purcahsed On </td>
+                                            <td class="selectedTableCustomer">Customer</td>
+                                            <td class="selectedTableShipTo">Ship to</td>
+                                            <td class="selectedTableBasePrice">Base Price</td>
+                                            <td class="selectedTablePurchasedPrice">Purchased Price</td>
+                                            <td class="selectedTableStatus">Status</td>
+                                            <td class="selectedTableActions">Actions</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>1</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,600.00</td>
+                                            <td>$ 3,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>2</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,600.00</td>
+                                            <td>$ 1,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorPink">Closed</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>3</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 600.000</td>
+                                            <td>$ 600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>4</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 300.00</td>
+                                            <td>$ 300.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>5</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,600.00</td>
+                                            <td>$ 3,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorPink">Closed</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>6</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,600.00</td>
+                                            <td>$ 1,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorPink">Closed</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>7</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 600.000</td>
+                                            <td>$ 600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>8</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 300.00</td>
+                                            <td>$ 300.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>9</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 3,600.00</td>
+                                            <td>$ 3,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <input tabindex="5" type="checkbox" class="minimal-checkbox-default">
+                                            </td>
+                                            <td>10</td>
+                                            <td>12.09.2015</td>
+                                            <td>Test Customer</td>
+                                            <td>Test Customer</td>
+                                            <td>$ 1,600.00</td>
+                                            <td>$ 1,600.00</td>
+                                            <td class="text-center">
+                                                <span class="label label-default colorYellow">On Hold</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-info btn-sm  float-button-light">View</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                   </table>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--row-->
+            <!--MEIN CONTENT-->
+	
+								
+@@include('./_stopConteiner.html') 		
+
+<script type="text/javascript" src="lib/icheck/icheck.js"></script>
+<script type="text/javascript" src="lib/icheck/custom.js"></script>
+<script type="text/javascript" src="lib/dataTable/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTableFunctions.js"></script>
+<script type="text/javascript" src="js/ordersFunctions.js"></script>
+
+@@include('./_footer.html') 

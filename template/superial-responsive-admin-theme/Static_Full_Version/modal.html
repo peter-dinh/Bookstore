@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="bootstrap admin template">
+	<meta name="author" content="">
+
+	<title>SUPERIAL | Modals</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="css/scss/style.min.css" rel="stylesheet">
+	<link href="lib/expandingSearchBar/component.css" rel="stylesheet">
+	<link href="lib/customScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="lib/hover/hover.css" rel="stylesheet">
+	<link href="lib/waves/waves.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href="lib/modalWindow/component.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="lib/html5shiv/html5shiv.min.js"></script>
+		<script src="lib/respondjs/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="la-ball-pulse la-2x">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<header>
+		<div id="headerMain">
+			<div id="header">
+				<div class="nawbarMain  headerWrapper clearfix">
+					<div class="nawbarMainLeft ">
+						<div class="mainLogo">
+						</div>
+						<!--mainLogo-->
+						<div class="nawbarMainButtonWrapper">
+							<button id="menuIcon" class="hamburger">
+								<span></span>
+							</button>
+						</div>
+						<div class="headerLogo">
+							<a href="index.html">Superial Admin</a>
+						</div>
+						<!--headerLogo-->
+					</div>
+					<!--nawbarMainLeft-->
+					<div class="nawbarMainRight">
+						<ul class="nawbarMainMenu">
+							<li><a id="toggle-link" class="reminderIcon  hvr-rectangle-out"><i class="fa fa-bell"></i></a></li>
+							<li><a id="toggle-link1" class="mailboxIcon  hvr-rectangle-out"><i class="fa fa-envelope"></i><span class="badge myColor">4</span></a></li>
+							<li><a id="toggle-link2" class="latestActivityIcon  hvr-rectangle-out"><i class="fa fa-calendar"></i></a></li>
+						</ul>
+						<div class="dropdown nawbarMainMenuSmallLeft">
+							<span class="dropdown-toggle dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button">
+                                <i class="fa fa-ellipsis-v"></i>
+                                </span>
+							<ul class="dropdown-menu">
+								<li><a href="#" id="toggle-link3" class="reminderIcon"><span class="headerMenuIconIndigo"><i class="fa fa-bell"></i></span>Reminder</a></li>
+								<li><a href="#" id="toggle-link4" class="mailboxIcon"><span class="headerMenuIconIndigo"><i class="fa fa-envelope"></i></span>Mailbox <span class="badge">4</span></a></li>
+								<li><a href="#" id="toggle-link5" class="latestActivityIcon"><span class="headerMenuIconIndigo"><i class="fa fa-calendar"></i></span>Activity</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--nawbarMainRight-->
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter search" type="search" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+					<div class="latestActivity">
+						<div class="latestActivityHeader colorCyan clearfix">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-calendar"></i></span><span class="mainContent">latest activity</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closelatestActivity pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						<!--latestActivityHeader-->
+						<div id="latestActivityContent">
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Today, 15:30
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> New invoice submited </span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Today, 14:45
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> Order placed</span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus etLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Yesterday, 17:46
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> Price Change </span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+						</div>
+						<!--latestActivityContent-->
+						<button type="button" class="latestActivityButton btn btn-success btn-df float-button-light">Load more</button>
+					</div>
+					<!--latestActivity-->
+					<div class="mailboxShow">
+						<div class="mailboxHeader clearfix colorPurpule">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-envelope"></i></span><span class="mainContent"> Email income</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closeMailbox pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						<!--commentsHeader-->
+						<div id="mailboxContent">
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder ">
+										<img src="img/user2.jpg" alt="user1" class="img-circle">
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Andy Opaits</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 14:50 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder ">
+										<img src="img/user3.jpg" alt="user1" class="img-circle">
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Amily Opaits</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 13:40 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder twitterColor">
+										<i class="fa fa-twitter"></i>
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Twitter</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 12:30 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder googleColor">
+										<i class="fa fa-google-plus"></i>
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Google +</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 11:35 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+						</div>
+						<!--mailboxContent-->
+						<button type="button" class="btn btn-info btn-df float-button-light  latestActivityButton">LOAD MORE</button>
+
+					</div>
+					<div class="reminderShow colorPink">
+						<div class="reminderHeader clearfix ">
+							<a class="closeReminde pull-right" href="#"><i class="fa fa-times"></i></a>
+						</div>
+						<!--commentsHeader-->
+						<div class="carouselWrapper">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<div class="carouselContent">
+											<h5>12/09/2015</h5>
+											<h6>5:30 PM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+									<div class="item ">
+										<div class="carouselContent">
+											<h5>14/09/2015</h5>
+											<h6>10:40 AM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+									<div class="item">
+										<div class="carouselContent">
+											<h5>15/09/2015</h5>
+											<h6>7:25 PM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+								</div>
+								<!-- Controls -->
+								<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+						<!--carouselWrapper-->
+					</div>
+					<!--reminderShow-->
+				</div>
+				<!--nawbarMain-->
+			</div>
+			<!--header-->
+		</div>
+		<!--headerMain -->
+	</header>
+
+	<div class="mainWrapper">
+		<div id="sideBarWrapper">
+			<div id="sideBarContent">
+				<div id="bar" class="sideBar sideBarDark">
+					<!-- start sitebar-->
+					<div class="sideBarUser">
+						<div class="sideBarUserConteiner">
+							<div class="sideBarUserConteinerImg">
+								<img src="img/userProfilLarge.jpg" alt="UserInfo" class="userimg">
+							</div>
+							<!--sideBarUserConteinerImg-->
+							<div class="sideBarUserConteinerText">
+								<span class="userInfo"><a href="user.html">Olga Lutskova </a><br><i class="fa fa-map-marker"></i> NY, Manhattan </span>
+							</div>
+							<!--sideBarUserConteinerText-->
+						</div>
+						<!--sideBarUserConteiner-->
+					</div>
+					<div id="menuContent">
+						<div id="menuSize">
+							<aside class="sidebar">
+								<nav class="sidebar-nav">
+									<ul class="metismenu" id="menu">
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Dashboards</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="true" class="collapse">
+												<li>
+													<a href="index.html">Dashboard 1</a>
+												</li>
+												<li>
+													<a href="dashboard2.html">Dashboard 2</a>
+												</li>
+												<li>
+													<a href="dashboard3.html">
+                                                    Dashboard 3
+                                                    </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Charts</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="chartjs.html">
+                                                      Chart.js
+                                                    </a>
+												</li>
+												<li>
+													<a href="flotchart.html">
+                                                    Flotchart
+                                                    </a>
+												</li>
+												<li>
+													<a href="morrischart.html">
+                                                    Morrischart <span class="badge colorCyan pull-right">3</span>
+                                                    </a>
+												</li>
+												<li>
+													<a href="sparklineschart.html">
+                                                    Sparklineschart 
+                                                    </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="gallery.html"><span class="glyphicon glyphicon-camera"></span>
+                                             Gallery
+                                            </a>
+										</li>
+										<li>
+											<a href="buttons.html"><span class="glyphicon glyphicon-hand-right"></span>
+                                             Buttons
+                                            </a>
+										</li>
+										<li>
+
+
+											<a href="widgets.html"><span class="glyphicon glyphicon-film"></span>Widgets<span class="badge colorPink pull-right">5 new</span></a>
+										</li>
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">UI Kits</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="typography.html">
+                                                        Typography
+                                                    </a>
+												</li>
+												<li>
+													<a href="tables.html">
+                                                        Tables
+                                                    </a>
+												</li>
+												<li>
+													<a href="datatables.html">
+                                                        DataTables
+                                                    </a>
+												</li>
+												<li>
+													<a href="tabs.html">
+                                                        Tabs 
+                                                    </a>
+												</li>
+												<li>
+													<a href="modal.html">
+                                                        Modal
+                                                    </a>
+												</li>
+												<li>
+													<a href="formelements.html">
+                                                        Formelements
+                                                    </a>
+												</li>
+												<li>
+													<a href="grid.html">
+                                                        Grid
+                                                    </a>
+												</li>
+												<li>
+													<a href="bars.html">
+                                                        Bars
+                                                    </a>
+												</li>
+												<li>
+													<a href="alerts.html">
+                                                        Alerts
+                                                    </a>
+												</li>
+												<li>
+													<a href="colors.html">
+                                                        Colors
+                                                    </a>
+												</li>
+											</ul>
+											<li>
+
+												<a href="calendar.html"><span class="glyphicon glyphicon-calendar"></span>
+                                                Calendar
+                                            </a>
+											</li>
+											<li>
+												<a href="#" aria-expanded="true">
+													<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+													<span class="sidebar-nav-item">E-commerce</span>
+													<span class="fa arrow"></span>
+												</a>
+												<ul aria-expanded="false" class="collapse">
+													<li>
+
+														<a href="sale_rates.html">
+                                                        Sale Rates
+                                                    </a>
+													</li>
+													<li>
+														<a href="orders.html">
+                                            Orders
+                                            </a>
+													</li>
+													<li>
+														<a href="orderview.html">
+                                            Order detail
+                                            </a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#" aria-expanded="true">
+													<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+													<span class="sidebar-nav-item">Mail</span>
+													<span class="fa arrow"></span>
+												</a>
+												<ul aria-expanded="false" class="collapse">
+
+													<li>
+														<a href="mailbox.html">
+                                                        Mailbox
+                                                    </a>
+													</li>
+
+													<li>
+
+														<a href="mail_detail.html">
+                                                        Email view
+                                                    </a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="tasks.html"><span class="glyphicon glyphicon-list-alt"></span>
+                                                Tasks
+                                            </a>
+											</li>
+											<li>
+												<a href="user.html"><span class="glyphicon glyphicon-user"></span>
+                                                User information
+                                            </a>
+											</li>
+											<li>
+												<a href="registration.html"><span class="glyphicon glyphicon-check"></span>
+                                                Registration
+                                            </a>
+											</li>
+									</ul>
+								</nav>
+							</aside>
+						</div>
+						<!--menuSize-->
+					</div>
+					<!--	menuContent-->
+
+
+					<div class="timeWrapper colorTheme">
+						<div class="menuTime2">
+							<span class="current-time2"></span>
+						</div>
+						<div class="menuTime">
+							<span class="current-time"></span>
+						</div>
+					</div>
+				</div>
+				<!--menuSize-->
+			</div>
+			<!--sideBar-->
+		</div>
+		<!--sideBarContent-->
+	</div>
+	<!--sideBarWrapper-->
+	<div id="mainWrapper" class="mainConteiner column">
+		<!--start nainconteiner-->
+		<div class="mainConteinerConten">
+			<div class="container-fluid footerfix">
+				<div class="row firstRow">
+					<!--row firstRow-->
+					<div class="col-lg-9  col-md-8  col-sm-7">
+						<div class="firstRowHeader">
+							<h5>MODAL</h5>
+						</div>
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a>UI Kits</a></li>
+							<li class="active">Modal</li>
+						</ol>
+					</div>
+					<!--firstRowHeader-->
+					<div class="col-lg-3   col-md-4  col-sm-5">
+						<div class="miniDiagramsConteiner">
+							<div class="miniDiagramsContent">
+								<div class="miniDiagramsContentHeader">
+									1290 items
+								</div>
+								<!--miniDiagramsContentHeader-->
+								<div class="miniDiagramsContentContent">
+									<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+								</div>
+								<!--miniDiagramsContentContent-->
+							</div>
+							<!--miniDiagramsContent-->
+							<div class="miniDiagramsContent">
+								<div class="miniDiagramsContentHeader">
+									$30,00 revenue
+
+								</div>
+								<!--miniDiagramsContentHeader-->
+								<div class="miniDiagramsContentContent">
+									<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+								</div>
+								<!--miniDiagramsContentContent-->
+							</div>
+							<!--miniDiagramsContent-->
+						</div>
+						<!--miniDiagramsConteiner-->
+					</div>
+				</div>
+				<!--MEIN CONTENT -->
+				<div class="md-modal md-effect-1" id="modal-1">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-2" id="modal-2">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-3" id="modal-3">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-4" id="modal-4">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-5" id="modal-5">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-6" id="modal-6">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-7" id="modal-7">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-8" id="modal-8">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-9" id="modal-9">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-10" id="modal-10">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-11" id="modal-11">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-12" id="modal-12">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-13" id="modal-13">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-14" id="modal-14">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-15" id="modal-15">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-16" id="modal-16">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-17" id="modal-17">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-18" id="modal-18">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="md-modal md-effect-19" id="modal-19">
+					<div class="md-content">
+						<h3>Modal Dialog</h3>
+						<div>
+							<p>This is a modal window. You can do the following things with it:</p>
+							<ul>
+								<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+								<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+								<li><strong>Close:</strong> click on the button below to close the modal.</li>
+							</ul>
+							<button class="btn btn-default md-close">Close me!</button>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>ModalWindowEffects</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<ul class="clearfix">
+											<li class="btn btn-defult remove"> <i class="fa fa-times"></i></li>
+											<li class="btn btn-defult  fullScreen"> <i class="fa fa-expand"></i> </li>
+											<li class=" btn btn-defult dropdown">
+												<a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+													<i class="fa fa-cog"></i>
+												</a>
+												<ul class="dropdown-menu" aria-labelledby="drop">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-lg-3 modelsWrapper clerfix">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-1">Fade in Scale</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-2">Slide in (right)</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-3">Slide in (bottom)</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-4">Newspaper</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-3 modelsWrapper clerfix">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-5">Fall</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-6">Side Fall</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-7">Sticky Up</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-8">3D Flip (horizontal)</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-3 modelsWrapper clerfix">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-9">3D Flip (vertical)</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-10">3D Sign</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-11">Super Scaled</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-12">Just Me</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-3 modelsWrapper clerfix">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-13">3D Slit</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-14">3D Rotate Bottom</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-15">3D Rotate In Left</button>
+										</div>
+										<div class="col-lg-3 modelsWrapper">
+
+											<button class="btn btn-default btn-df float-button-light md-trigger waves-effect waves-button waves-float waves-light waves-effect waves-button waves-float waves-light" data-modal="modal-16">Blur</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>Modal</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<ul class="clearfix">
+											<li class="btn btn-defult remove"> <i class="fa fa-times"></i></li>
+											<li class="btn btn-defult  fullScreen"> <i class="fa fa-expand"></i> </li>
+											<li class=" btn btn-defult dropdown">
+												<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+													<i class="fa fa-cog"></i>
+												</a>
+												<ul class="dropdown-menu" aria-labelledby="drop1">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-default btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal">Default</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-primary btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal1">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-success btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal2">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-info btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal3">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-warning btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal4">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-danger btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal5">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="modal modal-default fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel1">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-primary fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-success fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-info fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-warning fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-danger fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>Modal Large</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<ul class="clearfix">
+											<li class="btn btn-defult remove"> <i class="fa fa-times"></i></li>
+											<li class="btn btn-defult  fullScreen"> <i class="fa fa-expand"></i> </li>
+											<li class=" btn btn-defult dropdown">
+												<a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+													<i class="fa fa-cog"></i>
+												</a>
+												<ul class="dropdown-menu" aria-labelledby="drop2">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-default btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal6">Default</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-primary btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal7">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-success btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal8">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-info btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal9">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-warning btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal10">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-danger btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal11">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="modal modal-default fade bs-example-modal-lg" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-primary fade bs-example-modal-lg" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-success fade bs-example-modal-lg" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-info fade bs-example-modal-lg" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-warning fade bs-example-modal-lg" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-danger fade bs-example-modal-lg" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>Modal Small</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<ul class="clearfix">
+											<li class="btn btn-defult remove"> <i class="fa fa-times"></i></li>
+											<li class="btn btn-defult  fullScreen"> <i class="fa fa-expand"></i> </li>
+											<li class=" btn btn-defult dropdown">
+												<a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+													<i class="fa fa-cog"></i>
+												</a>
+												<ul class="dropdown-menu" aria-labelledby="drop3">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-default btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal12">Default</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-primary btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal13">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-success btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal14">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-info btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal15">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-warning btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal16">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="buttonWrapper">
+									<button type="button" class="btn btn-danger btn-df float-button-dark waves-effect" data-toggle="modal" data-target="#myModal17">Primary</button>
+								</div>
+								<!--buttonWrapper-->
+								<div class="modal modal-default fade bs-example-modal-sm" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-primary fade bs-example-modal-sm" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-success fade bs-example-modal-sm" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-info fade bs-example-modal-sm" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-warning fade bs-example-modal-sm" id="myModal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal modal-danger fade bs-example-modal-sm" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog modal-sm" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+											</div>
+											<div class="modal-body">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolorum nisi voluptate nesciunt praesentium architecto, laborum aperiam, omnis obcaecati aliquam ratione quia explicabo sit accusantium doloremque beatae quae quas maiores molestias impedit delectus exercitationem? Totam, facilis mollitia, eius esse rem exercitationem qui dicta consectetur, impedit, aliquam ea vero laborum repellat.
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-default">Save changes</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<!--MEIN CONTENT -->
+			</div>
+			<!--container-fluid-->
+		</div>
+		<!--mainConteinerConten-->
+		<div class="fotterWrapper">
+			© 2015 Copyright.
+		</div>
+		<!--fotterWrapper-->
+	</div>
+	<!--mainConteinerConten-->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/sparklineChart/sparkline.min.js"></script>
+	<script type="text/javascript" src="lib/sparklineChart/sparklineant.js"></script>
+	<script type="text/javascript" src="lib/expandingSearchBar/uisearch.js"></script>
+	<script type="text/javascript" src="lib/expandingSearchBar/classie.js"></script>
+	<script type="text/javascript" src="lib/slimscroll/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="lib/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="lib/metisMenu/metisMenu.min.js"></script>
+	<script type="text/javascript" src="lib/momentjs/moment.min.js"></script>
+	<script type="text/javascript" src="lib/waves/waves.min.js"></script>
+	<script type="text/javascript" src="lib/modalWindow/classie.js"></script>
+	<script type="text/javascript" src="lib/modalWindow/modalEffects.js"></script>
+	<script type="text/javascript" src="lib/modalWindow/cssParser.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>

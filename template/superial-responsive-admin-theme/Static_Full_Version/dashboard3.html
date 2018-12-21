@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="bootstrap admin template">
+	<meta name="author" content="">
+
+	<title>SUPERIAL | Dashboard 3</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="css/scss/style.min.css" rel="stylesheet">
+	<link href="lib/expandingSearchBar/component.css" rel="stylesheet">
+	<link href="lib/customScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+	<link href="lib/hover/hover.css" rel="stylesheet">
+	<link href="lib/waves/waves.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href="lib/animateCss/animate.css" rel="stylesheet" type="text/css">
+	<!-- Bootstrap -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="lib/html5shiv/html5shiv.min.js"></script>
+		<script src="lib/respondjs/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="la-ball-pulse la-2x">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<header>
+		<div id="headerMain">
+			<div id="header">
+				<div class="nawbarMain  headerWrapper clearfix">
+					<div class="nawbarMainLeft ">
+						<div class="mainLogo">
+						</div>
+						<!--mainLogo-->
+						<div class="nawbarMainButtonWrapper">
+							<button id="menuIcon" class="hamburger">
+								<span></span>
+							</button>
+						</div>
+						<div class="headerLogo">
+							<a href="index.html">Superial Admin</a>
+						</div>
+						<!--headerLogo-->
+					</div>
+					<!--nawbarMainLeft-->
+					<div class="nawbarMainRight">
+						<ul class="nawbarMainMenu">
+							<li><a id="toggle-link" class="reminderIcon  hvr-rectangle-out"><i class="fa fa-bell"></i></a></li>
+							<li><a id="toggle-link1" class="mailboxIcon  hvr-rectangle-out"><i class="fa fa-envelope"></i><span class="badge myColor">4</span></a></li>
+							<li><a id="toggle-link2" class="latestActivityIcon  hvr-rectangle-out"><i class="fa fa-calendar"></i></a></li>
+						</ul>
+						<div class="dropdown nawbarMainMenuSmallLeft">
+							<span class="dropdown-toggle dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button">
+                                <i class="fa fa-ellipsis-v"></i>
+                                </span>
+							<ul class="dropdown-menu">
+								<li><a href="#" id="toggle-link3" class="reminderIcon"><span class="headerMenuIconIndigo"><i class="fa fa-bell"></i></span>Reminder</a></li>
+								<li><a href="#" id="toggle-link4" class="mailboxIcon"><span class="headerMenuIconIndigo"><i class="fa fa-envelope"></i></span>Mailbox <span class="badge">4</span></a></li>
+								<li><a href="#" id="toggle-link5" class="latestActivityIcon"><span class="headerMenuIconIndigo"><i class="fa fa-calendar"></i></span>Activity</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--nawbarMainRight-->
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter search" type="search" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+					<div class="latestActivity">
+						<div class="latestActivityHeader colorCyan clearfix">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-calendar"></i></span><span class="mainContent">latest activity</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closelatestActivity pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						<!--latestActivityHeader-->
+						<div id="latestActivityContent">
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Today, 15:30
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> New invoice submited </span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Today, 14:45
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> Order placed</span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus etLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+							<div class="latestActivityAntWrapper">
+								<div class="latestActivityAntContent">
+									<div class="latestActivityAntContentHeader">
+										<span class="point"></span> Yesterday, 17:46
+									</div>
+									<div class="latestActivityAntContentText">
+										<span class="latestActivityAntContentTextHeader"> Price Change </span>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+									</div>
+									<!--latestActivityAntContentText-->
+								</div>
+								<!--latestActivityAntContent-->
+							</div>
+							<!--latestActivityAntWrapper-->
+						</div>
+						<!--latestActivityContent-->
+						<button type="button" class="latestActivityButton btn btn-success btn-df float-button-light">Load more</button>
+					</div>
+					<!--latestActivity-->
+					<div class="mailboxShow">
+						<div class="mailboxHeader clearfix colorPurpule">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-envelope"></i></span><span class="mainContent"> Email income</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closeMailbox pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						<!--commentsHeader-->
+						<div id="mailboxContent">
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder ">
+										<img src="img/user2.jpg" alt="user1" class="img-circle">
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Andy Opaits</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 14:50 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder ">
+										<img src="img/user3.jpg" alt="user1" class="img-circle">
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Amily Opaits</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 13:40 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder twitterColor">
+										<i class="fa fa-twitter"></i>
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Twitter</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 12:30 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+							<div class="mailBoxContentAnt">
+								<div class="mailBoxContentAntIcon">
+									<div class="mailIconHolder googleColor">
+										<i class="fa fa-google-plus"></i>
+									</div>
+									<!--mailIconHolder-->
+								</div>
+								<!--mailBoxContentAntIcon-->
+								<div class="mailBoxContentAntContent">
+									<span>Google +</span>&nbsp;/&nbsp; <span class="mailTime mainMailColor">Today 11:35 <a href=""><i class="fa fa-thumb-tack"></i></a></span>
+
+									<a href="mail_detail.html" class="mailboxWatch ">
+										<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget consequat.</p>
+									</a>
+								</div>
+								<!--mailBoxContentAntContent-->
+							</div>
+							<!--mailBoxContentAnt-->
+						</div>
+						<!--mailboxContent-->
+						<button type="button" class="btn btn-info btn-df float-button-light  latestActivityButton">LOAD MORE</button>
+
+					</div>
+					<div class="reminderShow colorPink">
+						<div class="reminderHeader clearfix ">
+							<a class="closeReminde pull-right" href="#"><i class="fa fa-times"></i></a>
+						</div>
+						<!--commentsHeader-->
+						<div class="carouselWrapper">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<div class="carouselContent">
+											<h5>12/09/2015</h5>
+											<h6>5:30 PM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+									<div class="item ">
+										<div class="carouselContent">
+											<h5>14/09/2015</h5>
+											<h6>10:40 AM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+									<div class="item">
+										<div class="carouselContent">
+											<h5>15/09/2015</h5>
+											<h6>7:25 PM</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+										<!--carouselContent-->
+										<div class="carousel-caption">
+										</div>
+									</div>
+								</div>
+								<!-- Controls -->
+								<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+						<!--carouselWrapper-->
+					</div>
+					<!--reminderShow-->
+				</div>
+				<!--nawbarMain-->
+			</div>
+			<!--header-->
+		</div>
+		<!--headerMain -->
+	</header>
+
+	<div class="mainWrapper">
+		<div id="sideBarWrapper">
+			<div id="sideBarContent">
+				<div id="bar" class="sideBar sideBarDark">
+					<!-- start sitebar-->
+					<div class="sideBarUser">
+						<div class="sideBarUserConteiner">
+							<div class="sideBarUserConteinerImg">
+								<img src="img/userProfilLarge.jpg" alt="UserInfo" class="userimg">
+							</div>
+							<!--sideBarUserConteinerImg-->
+							<div class="sideBarUserConteinerText">
+								<span class="userInfo"><a href="user.html">Olga Lutskova </a><br><i class="fa fa-map-marker"></i> NY, Manhattan </span>
+							</div>
+							<!--sideBarUserConteinerText-->
+						</div>
+						<!--sideBarUserConteiner-->
+					</div>
+					<div id="menuContent">
+						<div id="menuSize">
+							<aside class="sidebar">
+								<nav class="sidebar-nav">
+									<ul class="metismenu" id="menu">
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Dashboards</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="true" class="collapse">
+												<li>
+													<a href="index.html">Dashboard 1</a>
+												</li>
+												<li>
+													<a href="dashboard2.html">Dashboard 2</a>
+												</li>
+												<li>
+													<a href="dashboard3.html">
+                                                    Dashboard 3
+                                                    </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">Charts</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="chartjs.html">
+                                                      Chart.js
+                                                    </a>
+												</li>
+												<li>
+													<a href="flotchart.html">
+                                                    Flotchart
+                                                    </a>
+												</li>
+												<li>
+													<a href="morrischart.html">
+                                                    Morrischart <span class="badge colorCyan pull-right">3</span>
+                                                    </a>
+												</li>
+												<li>
+													<a href="sparklineschart.html">
+                                                    Sparklineschart 
+                                                    </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="gallery.html"><span class="glyphicon glyphicon-camera"></span>
+                                             Gallery
+                                            </a>
+										</li>
+										<li>
+											<a href="buttons.html"><span class="glyphicon glyphicon-hand-right"></span>
+                                             Buttons
+                                            </a>
+										</li>
+										<li>
+
+
+											<a href="widgets.html"><span class="glyphicon glyphicon-film"></span>Widgets<span class="badge colorPink pull-right">5 new</span></a>
+										</li>
+										<li>
+											<a href="#" aria-expanded="true">
+												<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+												<span class="sidebar-nav-item">UI Kits</span>
+												<span class="fa arrow"></span>
+											</a>
+											<ul aria-expanded="false" class="collapse">
+												<li>
+													<a href="typography.html">
+                                                        Typography
+                                                    </a>
+												</li>
+												<li>
+													<a href="tables.html">
+                                                        Tables
+                                                    </a>
+												</li>
+												<li>
+													<a href="datatables.html">
+                                                        DataTables
+                                                    </a>
+												</li>
+												<li>
+													<a href="tabs.html">
+                                                        Tabs 
+                                                    </a>
+												</li>
+												<li>
+													<a href="modal.html">
+                                                        Modal
+                                                    </a>
+												</li>
+												<li>
+													<a href="formelements.html">
+                                                        Formelements
+                                                    </a>
+												</li>
+												<li>
+													<a href="grid.html">
+                                                        Grid
+                                                    </a>
+												</li>
+												<li>
+													<a href="bars.html">
+                                                        Bars
+                                                    </a>
+												</li>
+												<li>
+													<a href="alerts.html">
+                                                        Alerts
+                                                    </a>
+												</li>
+												<li>
+													<a href="colors.html">
+                                                        Colors
+                                                    </a>
+												</li>
+											</ul>
+											<li>
+
+												<a href="calendar.html"><span class="glyphicon glyphicon-calendar"></span>
+                                                Calendar
+                                            </a>
+											</li>
+											<li>
+												<a href="#" aria-expanded="true">
+													<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+													<span class="sidebar-nav-item">E-commerce</span>
+													<span class="fa arrow"></span>
+												</a>
+												<ul aria-expanded="false" class="collapse">
+													<li>
+
+														<a href="sale_rates.html">
+                                                        Sale Rates
+                                                    </a>
+													</li>
+													<li>
+														<a href="orders.html">
+                                            Orders
+                                            </a>
+													</li>
+													<li>
+														<a href="orderview.html">
+                                            Order detail
+                                            </a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#" aria-expanded="true">
+													<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+													<span class="sidebar-nav-item">Mail</span>
+													<span class="fa arrow"></span>
+												</a>
+												<ul aria-expanded="false" class="collapse">
+
+													<li>
+														<a href="mailbox.html">
+                                                        Mailbox
+                                                    </a>
+													</li>
+
+													<li>
+
+														<a href="mail_detail.html">
+                                                        Email view
+                                                    </a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="tasks.html"><span class="glyphicon glyphicon-list-alt"></span>
+                                                Tasks
+                                            </a>
+											</li>
+											<li>
+												<a href="user.html"><span class="glyphicon glyphicon-user"></span>
+                                                User information
+                                            </a>
+											</li>
+											<li>
+												<a href="registration.html"><span class="glyphicon glyphicon-check"></span>
+                                                Registration
+                                            </a>
+											</li>
+									</ul>
+								</nav>
+							</aside>
+						</div>
+						<!--menuSize-->
+					</div>
+					<!--	menuContent-->
+
+
+					<div class="timeWrapper colorTheme">
+						<div class="menuTime2">
+							<span class="current-time2"></span>
+						</div>
+						<div class="menuTime">
+							<span class="current-time"></span>
+						</div>
+					</div>
+				</div>
+				<!--menuSize-->
+			</div>
+			<!--sideBar-->
+		</div>
+		<!--sideBarContent-->
+	</div>
+	<!--sideBarWrapper-->
+	<div id="mainWrapper" class="mainConteiner column">
+		<!--start nainconteiner-->
+		<div class="mainConteinerConten">
+			<div class="container-fluid footerfix">
+				<div class="row firstRow">
+					<!--row firstRow-->
+					<div class="col-lg-9  col-md-8  col-sm-7">
+						<div class="firstRowHeader">
+							<h5>DASHBOARD 3</h5>
+						</div>
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a>Dashboards</a></li>
+							<li class="active">Dashboard 3</li>
+						</ol>
+					</div>
+					<!--firstRowHeader-->
+					<div class="col-lg-3   col-md-4  col-sm-5">
+						<div class="miniDiagramsConteiner">
+							<div class="miniDiagramsContent">
+								<div class="miniDiagramsContentHeader">
+									1290 items
+								</div>
+								<!--miniDiagramsContentHeader-->
+								<div class="miniDiagramsContentContent">
+									<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+								</div>
+								<!--miniDiagramsContentContent-->
+							</div>
+							<!--miniDiagramsContent-->
+							<div class="miniDiagramsContent">
+								<div class="miniDiagramsContentHeader">
+									$30,00 revenue
+								</div>
+								<!--miniDiagramsContentHeader-->
+								<div class="miniDiagramsContentContent">
+									<span class="inlinebar">4,3,4,5,3,5,4,3,4,5,3,5,4,5,3,5</span>
+								</div>
+								<!--miniDiagramsContentContent-->
+							</div>
+							<!--miniDiagramsContent-->
+						</div>
+						<!--miniDiagramsConteiner-->
+					</div>
+				</div>
+				<!--	MEIN CONTENT  -->
+				<div class="row">
+					<div class="col-lg-4 ">
+						<div class="panel panel-default colorCyan h500">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>Browser status</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<canvas id="chartDashboard8"></canvas>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+					<div class="col-lg-4 ">
+						<div class="panel panel-default h500">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>HALF YEAR REVENUE MARGIN</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div id="spy3" class="panel-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<canvas id="chartDashboard9"></canvas>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+					<div class="col-lg-4 ">
+						<div class="panel panel-default colorCyan h500">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>INDICATORS</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="indicators colorTheme">
+											<span>529</span>
+											<br>some text
+											<i class="fa fa-cloud-download"></i>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="indicators colorPurpule">
+											<span>529</span>
+											<br>some text
+											<i class="fa fa-cloud-download"></i>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="indicators colorPurpule">
+											<span>529</span>
+											<br>some text
+											<i class="fa fa-cloud-download"></i>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="indicators colorTheme">
+											<span>529</span>
+											<br>some text
+											<i class="fa fa-cloud-download"></i>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12 ">
+										<div class="indicators clearfix  colorTheme">
+											<div class="row">
+												<div class="col-md-6">
+													<div id="sparkline20" class="indicatorsCharts">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="indicatorsContent">
+														<span>529</span>
+														<br>some text
+														<i class="fa fa-cloud-download"></i>
+													</div>
+													<!--indicatorsContent-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8 ">
+						<div class="panel panel-default colorTheme h350">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>ACTIVITY</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<canvas id="chartDashboard7"></canvas>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+					<div class="col-lg-4 ">
+						<div class="panel panel-default colorPurpule smartPanel h350">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>REPORTS</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<p><span class="smartText colorTextWhite"><b>Consulting</b></span> <span class="smartText colorTextCyan pull-right"><b>80%</b></span></p>
+								<div class="progress" style="height: 10px;">
+									<div class="progress-bar colCyan" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+										<span class="sr-only">80% Complete (success)</span>
+									</div>
+								</div>
+								<p><span class="smartText colorTextWhite"><b>Online tutorials</b></span> <span class="smartText colorTextTheme pull-right"><b>60%</b></span></p>
+								<div class="progress" style="height: 10px;">
+									<div class="progress-bar colTheme" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+										<span class="sr-only">60% Complete</span>
+									</div>
+								</div>
+								<p><span class="smartText colorTextWhite"><b>EDU management</b></span> <span class="smartText colorTextPurpule pull-right"><b>40%</b></span></p>
+								<div class="progress" style="height: 10px;">
+									<div class="progress-bar colPink" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+										<span class="sr-only">40% Complete (warning)</span>
+									</div>
+								</div>
+								<p class="smartText colorTextWhite"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+							<!--panel-body-->
+						</div>
+					</div>
+				</div>
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default h350">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>Managed Services</h6>
+									<small>SERVICE REPORT OF THIS YEAR</small>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p></p>
+										<div class="position3 pull-right">
+											<div class="switch">
+												<div class="handle"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="serviseWrapper">
+									<div class="serviseContent animated pulse">
+										<canvas id="chartDashboard"></canvas>
+									</div>
+									<!--serviseContent-->
+									<div class="serviseContent animated  servisehide">
+										<canvas id="chartDashboard02"></canvas>
+									</div>
+									<!--serviseContent-->
+								</div>
+								<!--	serviseWrapper-->
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<div id="spy" class="row">
+					<div class="col-md-12 ">
+						<div class="panel panel-default ">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>SALE RATE</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body-widget saleRateContent">
+								<div class="panelMenu">
+									<ul>
+										<li><a href="#" class="activePanelMenu">Day</a></li>
+										<li><a href="#">Month</a></li>
+										<li><a href="#">Year</a></li>
+									</ul>
+								</div>
+								<div class="panelBodyContentChart  day  panelBodyContentActive">
+									<div class="panelBodyContentMain">
+										<div class="chartPlaseholder">
+											<div id="placeholder11"></div>
+										</div>
+									</div>
+									<!--panelBodyContentMain-->
+								</div>
+								<!--panelBodyContent-->
+								<div class="panelBodyContentChart month">
+									<div class="panelBodyContentMain">
+										<div class="chartPlaseholder">
+											<div id="placeholder12"></div>
+										</div>
+									</div>
+									<!--panelBodyContentMain-->
+								</div>
+								<!--panelBodyContent-->
+								<div class="panelBodyContentChart year">
+									<div class="panelBodyContentMain">
+										<div class="chartPlaseholder">
+											<div id="placeholder13"></div>
+										</div>
+									</div>
+									<!--panelBodyContentMain-->
+								</div>
+								<!--panelBodyContent-->
+								<!--saleRateContent-->
+								<div class="saleRateFooter">
+									<ul>
+										<li><span class="sale1 saleIndigo">$157,182</span>
+											<br/><span>Total Earnings</span></li>
+										<li><span class="sale1">$38,952</span>
+											<br/><span>Revenue</span></li>
+										<li><span class="sale1">+800k</span>
+											<br/><span>New Customers</span></li>
+									</ul>
+									<div class="saleRateButtonPlaseholder">
+										<button type="button" class="btn btn-danger buttonsRounded float-button-light"><i class="fa fa-line-chart"></i></button>
+									</div>
+								</div>
+								<!--antConteinerFooter-->
+								<!--antConteinerFooter-->
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-4 ">
+						<div class="panel panel-default colorTheme h550">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>TODAY</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<div class="todayWrapper">
+									<div class="visitors">
+										<canvas id="chartDashboard4"></canvas>
+									</div>
+									<div class="pageviews todayHide">
+										<canvas id="chartDashboard41"></canvas>
+									</div>
+									<div class="logs  todayHide">
+										<canvas id="chartDashboard42"></canvas>
+									</div>
+								</div>
+								<div class="todayFooter2">
+									<ul class="clearfix">
+										<li class=""><a class="todayGraph1" href="#">VISITORS</a></li>
+										<li class=""><a class="todayGraph2" href="#">PAGEVIEWS</a></li>
+										<li class=""><a class="todayGraph3" href="#">LOGS<span class="badge todayBage">3</span></a></li>
+									</ul>
+									<br>
+									<p class="flow-text">Viris phaedrum ad cum, in usu ipsum percipit. Ut ponderum percipitur est, cum no natum ponderum. In affert fierent vix.</p>
+								</div>
+								<!--todayFooter-->
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+					<div class="col-lg-4 ">
+						<div class="panel panel-default h550">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>LAST MONTH</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<canvas id="chartDashboard5"></canvas>
+								<div class="lastFooter">
+									<ul>
+										<li><span class="number1">1</span><span class="description">.inc company</span><span class="index">8%</span></li>
+										<li><span class="number2">2</span><span class="description">Camecorp</span><span class="index">23%</span></li>
+										<li><span class="number3">3</span><span class="description">Startup</span><span class="index">69%</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+					<div class="col-lg-4 ">
+						<div class="panel panel-default h550">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>TASK COMPLETED</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body">
+								<canvas id="chartDashboard11"></canvas>
+								<div class="row">
+									<div class="col-md-6 text-center">
+										<div class="taskKomplitedAnt colorCyan img-circle text-center">
+											45%
+										</div>
+										<span>Team A</span>
+									</div>
+									<div class="col-md-6 text-center">
+										<div class="taskKomplitedAnt colorTheme img-circle text-center">
+											25%
+										</div>
+										<span>Team B</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 text-center">
+										<div class="taskKomplitedAnt colorPink img-circle text-center">
+											23%
+										</div>
+										<span>Team C</span>
+									</div>
+									<div class="col-md-6 text-center">
+										<div class="taskKomplitedAnt colorPurpule img-circle text-center">
+											7%
+										</div>
+										<span>Team D</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<div class="row">
+					<div class="col-lg-12 ">
+						<div class="panel panel-default">
+							<div class="panel-heading clearfix">
+								<div class="panel-heading-title pull-left">
+									<h6>AMSTERDAM</h6>
+								</div>
+								<!--panel-heading-title-->
+								<div class="panel-heading-buttons pull-right">
+									<div class="bs-example">
+										<p class="clearfix">
+											<button class="btn remove"> <i class="fa fa-times"></i></button>
+									</div>
+								</div>
+								<!--panel-heading-buttons-->
+							</div>
+							<!--panel-->
+							<div class="panel-body clearfix">
+								<img class="img-rounded img-responsive" src="img/amsterdam.jpg" alt="amsterdam">
+								<div class="amsterdamContent">
+									<div class="amsterdamButtonPlaseholder">
+										<button type="button" class="btn btn-danger buttonsRounded float-button-light"><i class="fa fa-pencil"></i></button>
+									</div>
+									<!--	amsterdamContent-->
+									<br>
+									<br>
+									<p>Amsterdam's name derives from Amstelredamme, indicative of the city's origin as a dam of the river Amstel. Originating as a small fishing village in the late 12th century, Amsterdam became one of the most important ports in the world during the Dutch Golden Age (17th century), a result of its innovative developments in trade.</p>
+									<p> During that time, the city was the leading center for finance and diamonds. In the 19th and 20th centuries, the city expanded, and many new neighborhoods and suburbs were planned and built. The 17th-century canals of Amsterdam and the 19–20th century Defence Line of Amsterdam are on the UNESCO World Heritage List.</p>
+									<br>
+								</div>
+							</div>
+						</div>
+						<!--panel-body-->
+					</div>
+				</div>
+				<!--row-->
+				<!--MEIN CONTENT-->
+			</div>
+			<!--container-fluid-->
+		</div>
+		<!--mainConteinerConten-->
+		<div class="fotterWrapper">
+			© 2015 Copyright.
+		</div>
+		<!--fotterWrapper-->
+	</div>
+	<!--mainConteinerConten-->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/sparklineChart/sparkline.min.js"></script>
+	<script type="text/javascript" src="lib/sparklineChart/sparklineant.js"></script>
+	<script type="text/javascript" src="lib/expandingSearchBar/uisearch.js"></script>
+	<script type="text/javascript" src="lib/expandingSearchBar/classie.js"></script>
+	<script type="text/javascript" src="lib/slimscroll/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="lib/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="lib/metisMenu/metisMenu.min.js"></script>
+	<script type="text/javascript" src="lib/momentjs/moment.min.js"></script>
+	<script type="text/javascript" src="lib/waves/waves.min.js"></script>
+	<script type="text/javascript" src="lib/chartjs/chart.min.js"></script>
+	<script type="text/javascript" src="lib/flotChart/jquery.flot.js"></script>
+	<script type="text/javascript" src="lib/flotChart/jquery.flot.pie.js"></script>
+	<script type="text/javascript" src="lib/flotChart/jquery.flot.resize.js"></script>
+	<script type="text/javascript" src="js/dashboard3Functions.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>

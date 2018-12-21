@@ -1,0 +1,170 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="bootstrap admin template">
+	<meta name="author" content="">
+
+	<title>{% block title %}{% endblock %}</title>
+
+	<link href="{% static 'admin/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/css/font-awesome.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/metisMenu/metisMenu.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/css/scss/style.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/expandingSearchBar/component.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/customScrollbar/jquery.mCustomScrollbar.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/hover/hover.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/waves/waves.css' %}" rel="stylesheet">
+	<link rel="icon" href="{% static 'admin/img/favicon.ico' %}" type="image/x-icon" />
+	<link rel="shortcut icon" href="{% static 'admin/img/favicon.ico' %}" type="image/x-icon" />
+	<link href="{% static 'admin/lib/simpleWeather/simpleweather.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/icheck/skins/all.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/lib/animateCss/animate.css' %}" rel="stylesheet" type="text/css">
+	<!-- Bootstrap -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="lib/html5shiv/html5shiv.min.js"></script>
+		<script src="lib/respondjs/respond.min.js"></script>
+    <![endif]-->
+    {% block link_css %}
+    {% endblock %}
+    {% block style_css %}
+    {% endblock %}
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="la-ball-pulse la-2x">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<header>
+		<div id="headerMain">
+			<div id="header">
+				<div class="nawbarMain  headerWrapper clearfix">
+					<div class="nawbarMainLeft ">
+						<div class="mainLogo">
+						</div>
+						<!--mainLogo-->
+						<div class="nawbarMainButtonWrapper">
+							<button id="menuIcon" class="hamburger">
+								<span></span>
+							</button>
+						</div>
+						<div class="headerLogo">
+							<a href="index.html">Book Store</a>
+						</div>
+						<!--headerLogo-->
+					</div>
+					<!--nawbarMainLeft-->
+					<div class="latestActivity">
+						<div class="latestActivityHeader colorCyan clearfix">
+							<div class="antBoxHeaderText">
+								<span class="mainIcon"><i class="fa fa-calendar"></i></span><span class="mainContent">latest activity</span>
+							</div>
+							<!--mantBoxHeaderTexText-->
+							<div class="antBoxHeaderIcon">
+								<a class="closelatestActivity pull-right" href="#"><i class="fa fa-times"></i></a>
+							</div>
+							<!--antBoxHeaderIcon-->
+						</div>
+						
+					</div>
+					<!--latestActivity-->
+
+					<!--reminderShow-->
+				</div>
+				<!--nawbarMain-->
+			</div>
+			<!--header-->
+		</div>
+		<!--headerMain -->
+	</header>
+
+	<div class="mainWrapper">
+		<div id="sideBarWrapper">
+			<div id="sideBarContent">
+				<div id="bar" class="sideBar sideBarDark">
+					
+					{% include "admin/snippets/menu.html" %}
+					<!--	menuContent-->
+
+
+					<div class="timeWrapper colorTheme">
+						<div class="menuTime2">
+							<span class="current-time2"></span>
+						</div>
+						<div class="menuTime">
+							<span class="current-time"></span>
+						</div>
+					</div>
+				</div>
+				<!--menuSize-->
+			</div>
+			<!--sideBar-->
+		</div>
+		<!--sideBarContent-->
+	</div>
+	<!--sideBarWrapper-->
+	<div id="mainWrapper" class="mainConteiner column">
+		<!--start nainconteiner-->
+		<div class="mainConteinerConten">
+			<div class="container-fluid footerfix">
+				<div class="row firstRow">
+					<!--row firstRow-->
+					{% block header %}
+					{% endblock %}
+					
+					<!--firstRowHeader-->
+				</div>
+				<!--	MEIN CONTENT  -->
+				{% include "admin/snippets/message.html" %}
+				{% block content %}
+				{% endblock %}
+			</div>
+        </div>
+        
+		<!--mainConteinerConten-->
+		<div class="fotterWrapper">
+			© 2018 Copyright.
+		</div>
+		<!--fotterWrapper-->
+	</div>
+	<!--mainConteinerConten-->
+	<script type="text/javascript" src="{% static 'admin/js/jquery-1.11.3.min.js' %}"></script>
+	<script src="{% static 'admin/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/sparklineChart/sparkline.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/sparklineChart/sparklineant.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/expandingSearchBar/uisearch.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/expandingSearchBar/classie.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/customScrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/metisMenu/metisMenu.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/momentjs/moment.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/waves/waves.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/simpleWeather/jquery.simpleWeather.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/countdown/jquery.countdown.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/waves/waves.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/chartjs/chart.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/flotChart/jquery.flot.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/flotChart/jquery.flot.pie.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/flotChart/jquery.flot.resize.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/jquery-ui/jquery-ui.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/js/buttonsFunctions.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/icheck/icheck.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/icheck/custom.js' %}"></script>
+	
+    {% block js %}
+    {% endblock %}
+
+</body>
+
+</html>

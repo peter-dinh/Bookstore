@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+{% load staticfiles %}
+{% block title %}
+Tổng quan
+{% endblock %}
+{% block header %}
+<div class="col-lg-9  col-md-8  col-sm-7">
+    <div class="firstRowHeader">
+        <h5>Sửa thể loại</h5>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="/admin">Trang chủ</a></li>
+        <li><a href="/admin/manager_product">Thể loại</a></li>
+        <li class="active">Sửa thể loại</li>
+    </ol>
+</div>
+{% endblock %}
+{% block content %}
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'admin/js/functions.js' %}"></script>
+{% endblock %}

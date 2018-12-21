@@ -1,0 +1,95 @@
+$mainColorWhite: #fff;
+$mainColorDark: #333;
+$mainColorGray: #b0b7c1;
+$mainColorTheme: #00e2f0;
+$mainColorPurpule: #9c27b0;
+$mainColorCyan: #00a2b4;
+$mainColorPink: #db008c;
+$mainColorYellow: #ffeb3b;
+$mainColorDarkOrange: #b0751e;
+$borderColor: #ECF0F1;
+$mainPedding: 15px 20px;
+$mainTextSize: 14px;
+$middleTextSize: 16px;
+$largeTextSize: 18px;
+$mainBorder: 1px solid $borderColor;
+@mixin mainShadow {
+	-moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+@mixin mainAngel {
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+@mixin roundBottom {
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+@mixin roundTop {
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+@mixin mainBox {
+	padding: 20px;
+	margin: 10px 5px !important;
+	background-color: $mainColorWhite;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border-bottom: $mainBorder;
+	@media (max-width: 765px) {
+		padding: 10px;
+		margin: 30px 10px;
+	}
+}
+
+@mixin mainBoxHeader {
+	font-size: $largeTextSize;
+	text-transform: uppercase;
+	padding: 0px 0px;
+	@media (max-width: 765px) {
+		font-size: $mainTextSize;
+		font-weight: 500;
+	}
+}
+
+@mixin mainLabel {
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+@mixin mainLabelHeader {
+	font-size: $largeTextSize;
+	text-transform: uppercase;
+	padding: 0px 0px 10px 40px;
+	@media (max-width: 765px) {
+		font-size: $mainTextSize;
+		font-weight: 500;
+	}
+}
+
+@mixin roundIcon {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: $mainColorPink;
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+	text-align: center;
+	i {
+		color: $mainColorWhite;
+		font-size: 25px;
+		line-height: 50px;
+	}
+}
+
+@mixin antHeader {
+	display: block;
+	text-transform: uppercase;
+	font-size: $middleTextSize;
+	padding: 20px;
+}
