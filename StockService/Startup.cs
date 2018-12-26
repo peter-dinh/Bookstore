@@ -34,8 +34,8 @@ namespace StockService
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
             var password = Environment.GetEnvironmentVariable("SQLSERVER_SA_PASSWORD") ?? "Truong97";
-            var connString = $"Data Source={hostname};Initial Catalog=StockContext;User ID=sa;Password={password};MultipleActiveResultSets=true;";
-            //var connString = $"Server=db;Initial Catalog=Order_Context;User ID=sa;Password={password};";                        
+            // var connString = $"Data Source={hostname};Initial Catalog=StockContext;User ID=sa;Password={password};MultipleActiveResultSets=true;";
+            var connString = $"Server=db;Initial Catalog=StockContext;User ID=sa;Password={password};";                        
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<IReceiptRepository, ReceiptRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();

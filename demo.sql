@@ -1,6 +1,7 @@
 -- drop DATABASE ProductContext
 
-use ProductContext
-go 
+-- use ProductContext
+-- go 
 
-select * from sys.tables
+select * from sys.databases
+GO
