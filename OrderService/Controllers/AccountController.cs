@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using OrderService.Models;
 using OrderService.Repository;
 using OrderService.Infastructure;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 namespace OrderService.Controllers
 {
@@ -40,6 +44,50 @@ namespace OrderService.Controllers
             {
                 return BadRequest(ex);
             }
+        }
+
+        [Route("login")]
+        [HttpPost]
+
+        public IActionResult Login([FromBody]Login data)
+        {
+            
+            var account = _service.GetSingleByCondition(c => c.Email == data.Email && c.Password == Encryptor.MD5Hash(data.Password));
+            if (account != null){
+                var claims = new []
+                {
+                    new Claim("Email", account.Email),
+                    new Claim(ClaimTypes.Role, account.AccountType.ToString()),
+                };
+
+                var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("day la ma khoa token bi mat"));
+                var token = new JwtSecurityToken(
+                    issuer: "http://abc.com",
+                    audience: "http://abc.com",
+                    expires: account.Created.AddMonths(12),
+                    claims: claims,
+                    signingCredentials: new Microsoft.IdentityModel.Tokens.SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256Signature)
+                );
+                return Ok(new
+                    {
+                        token = new JwtSecurityTokenHandler().WriteToken(token),
+                    }
+                );
+            } 
+            return NotFound();
+        }
+
+        [Route("register")]
+        [HttpPost]
+        public IActionResult Register([FromBody]Account model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            model.Password = Encryptor.MD5Hash(model.Password);
+            model.AccountType = 0;
+            model.Created = Convert.ToDateTime(model.Created);
+            _service.Add(model);
+            return Ok(model);
         }
 
         [HttpPost]

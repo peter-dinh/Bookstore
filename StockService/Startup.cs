@@ -13,6 +13,9 @@ using Microsoft.Extensions.Options;
 using StockService.Repository;
 using StockService.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace StockService
 {
@@ -38,6 +41,25 @@ namespace StockService
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IReceiptDetailRepository, ReceiptDetailRepository>();
             services.AddDbContext<StockContext>(options => options.UseSqlServer(connString));
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidAudience = "http://abc.com",
+                    ValidIssuer = "http://abc.com",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("day la ma khoa token bi mat"))
+                };
+            });
             services.AddSession();
         }
 

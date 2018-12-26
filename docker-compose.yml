@@ -1,0 +1,30 @@
+version: "3"
+services:
+    order_api:
+        image: "bookstore/productservice"
+        ports:
+            - "8081:8081"
+        restart: always
+        depends_on:
+            - db
+    rating_api:
+        image: "bookstore/orderservice"
+        ports:
+            - "8082:8082"
+        restart: always
+        depends_on: 
+            - db
+    receipt_api:
+        image: "bookstore/stockservice" 
+        ports:
+            - "8083:8083"
+        restart: always
+        depends_on:
+            - db
+    db:
+        image: "microsoft/mssql-server-linux"
+        hostname: 'sqlserver'
+        environment:
+            SA_PASSWORD: "TruongDinh"
+            ACCEPT_EULA: "Y"
+        restart: always
