@@ -11,6 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using OrderService.Repository;
+using OrderService.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace OrderService
 {
     public class Startup
@@ -26,6 +30,15 @@ namespace OrderService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
+            var password = Environment.GetEnvironmentVariable("SQLSERVER_SA_PASSWORD") ?? "Truong97";
+            var connString = $"Data Source={hostname};Initial Catalog=OrderContext;User ID=sa;Password={password};MultipleActiveResultSets=true;";
+            //var connString = $"Server=db;Initial Catalog=Order_Context;User ID=sa;Password={password};";                        
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IOrderItemRepository, OrderItemRepository>();
+            services.AddDbContext<OrderContext>(options => options.UseSqlServer(connString));
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +54,7 @@ namespace OrderService
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

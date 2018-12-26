@@ -1,10 +1,82 @@
 {% extends "admin/base.html" %}
 {% load staticfiles %}
 {% block title %}
-Tổng quan
+Xem đánh giá
+{% endblock %}
+{% block header %}
+<div class="col-lg-9  col-md-8  col-sm-7">
+    <div class="firstRowHeader">
+        <h5>Đánh giá</h5>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a>Quản lý đánh giá</a></li>
+        <li class="active">Xem đánh giá</li>
+    </ol>
+</div>
 {% endblock %}
 {% block content %}
+<div class="row">
+    <div class="col-lg-12 ">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <div class="panel-heading-title pull-left">
+                    <h6>Sửa thể loại</h6>
+                </div>
+                <!--panel-heading-title-->
+                <div class="panel-heading-buttons pull-right">
+                    <div class="bs-example">
+                        
+                    </div>
+                </div>
+                <!--panel-heading-buttons-->
+            </div>
+            <!--panel-->
+            <div class="panel-body">
+                <div class="row inputWrapper ">
+                    <label>Khách hàng:</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Sản phẩm:</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Số sao</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Bình luận</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Hiển thị</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <a class="btn btn-primary">Trở về</a>
+        <!--panel-body-->
+    </div>
+</div>
 {% endblock %}
 
 {% block js %}
+<script type="text/javascript" src="{% static 'admin/js/functions.js' %}"></script>
 {% endblock %}

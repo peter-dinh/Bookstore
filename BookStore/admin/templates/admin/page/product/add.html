@@ -1,10 +1,182 @@
-{% extends "website/base.html" %}
+{% extends "admin/base.html" %}
 {% load staticfiles %}
 {% block title %}
-Tổng quan
+Thêm sản phẩm
+{% endblock %}
+{% block header %}
+<div class="col-lg-9  col-md-8  col-sm-7">
+    <div class="firstRowHeader">
+        <h5>Thêm sản phẩm</h5>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="/admin">Trang chủ</a></li>
+        <li><a href="/admin/manager_receipt">Quản lý sản phẩm</a></li>
+        <li class="active">Thêm sản phẩm</li>
+    </ol>
+</div>
 {% endblock %}
 {% block content %}
+<div class="row">
+    <div class="col-lg-12 ">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <div class="panel-heading-title pull-left">
+                    <h6>Thông tin phiếu nhập</h6>
+                </div>
+                <!--panel-heading-title-->
+                <div class="panel-heading-buttons pull-right">
+                    <div class="bs-example">
+                        
+                    </div>
+                </div>
+                <!--panel-heading-buttons-->
+            </div>
+            <!--panel-->
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <div class="row inputWrapper ">
+                        <label>Sản phẩm</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Giá</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Số lượng</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row inputWrapper ">
+                        <label>Tên đại lý</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Số điện thoại đại lý</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Địa chỉ đại lý</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Email</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--panel-body-->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body topSellingHeader">
+                <div class="col-lg-6">
+                    <div class="panel-heading-title pull-left">
+                        <h6>Danh sách thể loại</h6>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row inputWrapper ">
+                        <label>Email</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label></label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <button class="btn-primary btn">Thêm thể loại</button>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="dataTableWrapper">
+                        <table class="table tableTheme">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Tên sản phẩm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Mar erte tett ksdf wer d gs a fge</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel-heading-title pull-left">
+                        <h6>Danh sách hình ảnh</h6>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row inputWrapper ">
+                        <label></label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <button class="btn-primary btn">Thêm hình ảnh</button>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="dataTableWrapper">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <a class="btn btn-primary">Trở về</a>
+    </div>
+</div>
 {% endblock %}
 
 {% block js %}
+<script type="text/javascript" src="{% static 'admin/js/functions.js' %}"></script>
 {% endblock %}
