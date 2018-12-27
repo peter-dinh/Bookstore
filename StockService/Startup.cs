@@ -77,6 +77,7 @@ namespace StockService
             }
 
             // app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

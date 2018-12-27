@@ -10,11 +10,13 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OrderService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class AccountController : ControllerBase
     {
         private IAccountRepository _service;
@@ -25,12 +27,18 @@ namespace OrderService.Controllers
         
 
         [HttpGet("{id}")]
+        
         public IActionResult GetAccount(int id)
         {
             try
             {
                 var target = _service.GetSingleById(id);
 
+                var currentUser = HttpContext.User;
+                if (currentUser.HasClaim(c => c.Type == "Email"))
+                {
+                    return Ok(currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value);
+                }
                 if (target == null)
                 {
                     return NotFound();
@@ -46,9 +54,10 @@ namespace OrderService.Controllers
             }
         }
 
+        
+
         [Route("login")]
         [HttpPost]
-
         public IActionResult Login([FromBody]Login data)
         {
             
@@ -95,6 +104,8 @@ namespace OrderService.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+            model.Password = Encryptor.MD5Hash(model.Password);
+            model.Created = Convert.ToDateTime(model.Created);
             _service.Add(model);
             return Ok(model);
         }
@@ -110,6 +121,7 @@ namespace OrderService.Controllers
             {
                 return NotFound();
             }
+            model.Password = Encryptor.MD5Hash(model.Password);
             _service.Update(model);
             return Ok(model);
         }

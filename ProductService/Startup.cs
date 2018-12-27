@@ -34,8 +34,8 @@ namespace ProductService
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
             var password = Environment.GetEnvironmentVariable("SQLSERVER_SA_PASSWORD") ?? "Truong97";
-            var connString = $"Data Source={hostname};Initial Catalog=ProductContext;User ID=sa;Password={password};MultipleActiveResultSets=true;";
-            //var connString = $"Server=db;Initial Catalog=Order_Context;User ID=sa;Password={password};";                        
+            // var connString = $"Data Source={hostname};Initial Catalog=ProductContext;User ID=sa;Password={password};MultipleActiveResultSets=true;";
+            var connString = $"Server=db;Initial Catalog=Order_Context;User ID=sa;Password={password};";                        
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IProduct_CategoryRepository, Product_CategoryRepository>();
@@ -83,6 +83,7 @@ namespace ProductService
             app.UseSession();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
