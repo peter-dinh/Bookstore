@@ -3,3 +3,10 @@
 {% block title %}
 Trang chủ
 {% endblock %}
+{% block content %}
+<!-- Start Slider area -->
+{% include "website/snippets/slide.html" %}
+<!-- End Slider area -->
+{% include 'website/snippets/best_seller_custom.html' %}
+{% include 'website/snippets/list_products.html' %}
+{% endblock %}
