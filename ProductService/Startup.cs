@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -64,6 +65,10 @@ namespace ProductService
                 };
             });
             services.AddSession();
+            services.Configure<FormOptions>(x => {
+                x.ValueLengthLimit = 134217728;
+                x.MultipartBodyLengthLimit = 134217728; // In case of multipart
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,11 +7,13 @@ using OrderService.Models;
 using OrderService.Repository;
 using OrderService.Infastructure;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OrderService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private IOrderRepository _service;

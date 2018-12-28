@@ -50,33 +50,41 @@ Quản lý tài khoản
                         <thead>
                             <tr>
                                 <th>Email</th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Address</th>
+                                <th>Điện thoại</th>
+                                <th>Loại tài khoản</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Email</th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Address</th>
+                                <th>Điện thoại</th>
+                                <th>Loại tài khoản</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
                             </tr>
                         </tfoot>
                         <tbody>
+                            {% for item in data %}
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
+                                <td>{{ item.email }}</td>
+                                <td>{{ item.phone }}</td>
+
+                                {% if item.accountType == 1 %}
+                                <td><label class="label label-info">Admin</label></td>
+                                {% else %}
+                                <td><label class="label label-warning">Khách hàng</label></td>
+                                {% endif %}
+
+                                {% if item.lock == 0 %}
+                                <td><label class="label label-success">Hoạt động</label></td>
+                                {% else %}
+                                <td><label class="label label-danger">Khóa</label></td>
+                                {% endif %}
+                                <td><a href="/admin/see_account/{{ item.id }}" class="btn btn-info">Xem chi tiết</a></td>
                             </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                            </tr>
-                            
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

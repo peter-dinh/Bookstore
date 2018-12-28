@@ -74,6 +74,7 @@ namespace ProductService.Controllers
             var model = _service.GetAll();
             return Ok(model);
         }
+
         [Route("GetAllAvailable")]
         [HttpGet]
         public IActionResult GetAllAvailable()
@@ -81,11 +82,20 @@ namespace ProductService.Controllers
             var model = _service.GetMulti(c => c.Is_Active);
             return Ok(model);
         }
-        [HttpGet("{id}")]
+
+        [Route("Info/{id}")]
+        [HttpGet]
         public IActionResult GetProduct(int id)
         {
-            var target = _service.GetSingleById(id);
-            return Ok(target);
+            var target = _service.GetSingleByCondition(c => c.Id == id);
+            if (target == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(target);
+            }      
         }
 
         [HttpPost]
@@ -137,12 +147,6 @@ namespace ProductService.Controllers
             Product model = data["product"].ToObject<Product>();
             var _listImg = data["images"].ToList();
             var _listCat = data["categories"].ToList();
-            // if (data["discount"] != null)
-            // {
-            //     Discount _objDiscount = data["discount"].ToObject<Discount>();
-            //     _service_discount.Update(_objDiscount);
-            // }
-            //Add tat' ca hinh anh vao
             for (int i = 0; i < _listImg.Count; i++)
             {
                 Product_Image toCreate = new Product_Image()
@@ -205,6 +209,7 @@ namespace ProductService.Controllers
             _service.Update(model);
             return Ok(model);
         }
+        
         [HttpDelete("{id}")]
         [Authorize(Roles = "1")]
         public IActionResult Delete(int id)

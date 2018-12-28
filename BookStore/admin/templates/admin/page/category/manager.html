@@ -15,7 +15,7 @@ Quản lý thể loại
 </div>
 <div class="col-lg-3   col-md-4  col-sm-5">
     <div class="miniDiagramsConteiner">
-        <a href class="btn btn-primary">Thêm mới thể loại</a>
+        <a href="/admin/add_category" class="btn btn-primary">Thêm mới thể loại</a>
     </div>
 </div>
 {% endblock %}
@@ -56,22 +56,27 @@ Quản lý thể loại
                             <tr>
                                 <th>Mã thể loại</th>
                                 <th>Tên thể loại</th>
-                                <th>Trạng thái</th>
+                                <th>Số lượng sản phẩm</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Mã thể loại</th>
                                 <th>Tên thể loại</th>
-                                <th>Trạng thái</th>
+                                <th>Số lượng sản phẩm</th>
+                                <th>Hành động</th>
                             </tr>
                         </tfoot>
                         <tbody>
+                            {% for item in data %}
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
+                                <td><label class="label label-info">CA{{item.id}}</label></td>
+                                <td><a href="/admin/edit_category/{{ item.id }}">{{ item.categoryName }}</a></td>
+                                <td>{{ item.quantity }}</td>
+                                <th><a href="/admin/archive_category/{{ item.id }}" class="btn btn-danger">Xóa thể loại</a></th>
                             </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

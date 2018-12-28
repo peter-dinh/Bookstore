@@ -11,6 +11,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
 
 namespace OrderService.Controllers
 {
@@ -25,20 +26,41 @@ namespace OrderService.Controllers
             _service = service;
         }
         
+        [Route("CheckToken")]
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetInfoAccountToken()
+        {
+            try
+            {
+                var currentUser = HttpContext.User;
+                if (currentUser.HasClaim(c => c.Type == "Email"))
+                {
+                    var email = currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value;
+                    Account account = _service.GetSingleByCondition(c => c.Email == email);
+                    if (account != null){
+                        return Ok(new
+                        {
+                            email = email,
+                            role = account.AccountType
+                        });
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+            return BadRequest();
+        }
 
+        [Authorize]
         [HttpGet("{id}")]
-        
         public IActionResult GetAccount(int id)
         {
             try
             {
                 var target = _service.GetSingleById(id);
-
-                var currentUser = HttpContext.User;
-                if (currentUser.HasClaim(c => c.Type == "Email"))
-                {
-                    return Ok(currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value);
-                }
                 if (target == null)
                 {
                     return NotFound();
@@ -58,11 +80,15 @@ namespace OrderService.Controllers
 
         [Route("login")]
         [HttpPost]
-        public IActionResult Login([FromBody]Login data)
+        public IActionResult Login([FromBody]JObject json)
         {
-            
+           Login data = json.ToObject<Login>();
             var account = _service.GetSingleByCondition(c => c.Email == data.Email && c.Password == Encryptor.MD5Hash(data.Password));
             if (account != null){
+                if (account.Lock == true)
+                {
+                    return BadRequest();
+                }
                 var claims = new []
                 {
                     new Claim("Email", account.Email),
@@ -88,8 +114,9 @@ namespace OrderService.Controllers
 
         [Route("register")]
         [HttpPost]
-        public IActionResult Register([FromBody]Account model)
+        public IActionResult Register([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             model.Password = Encryptor.MD5Hash(model.Password);
@@ -100,8 +127,9 @@ namespace OrderService.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]Account model)
+        public IActionResult Create([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             model.Password = Encryptor.MD5Hash(model.Password);
@@ -112,8 +140,9 @@ namespace OrderService.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Account model)
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Account = _service.GetSingleById(id);

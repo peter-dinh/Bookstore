@@ -9,7 +9,6 @@ using System.Net.Http.Headers;
 namespace ProductService.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(Roles = "1")]
     public class UploadController : Controller
     {
         private IHostingEnvironment _hostingEnvironment;
@@ -25,8 +24,9 @@ namespace ProductService.Controllers
         {
             return Json(_service.GetAll());
         }
-        [Route("get/{{id}}")]
-        [HttpGet]
+
+
+        [HttpGet("{{id}}")]
         public IActionResult GetByID(int id)
         {
             var result = _service.GetSingleById(id);
@@ -77,7 +77,9 @@ namespace ProductService.Controllers
             }
             catch (System.Exception ex)
             {
-                return Json("Upload Failed: " + ex.Message);
+                return BadRequest(new {
+                    Upload_Failed =  ex.Message,
+                    });
             }
         }
         

@@ -7,11 +7,13 @@ using StockService.Models;
 using StockService.Repository;
 using StockService.Infastructure;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace StockService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "1")]
     public class ReceiptController : ControllerBase
     {
         private IReceiptRepository _service;
@@ -24,6 +26,13 @@ namespace StockService.Controllers
             _service_product = service_product;
         }
         
+        [Route("All")]
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var model = _service.GetAll();
+            return Ok(model);
+        }
         
         [HttpGet("{id}")]
         public IActionResult GetReceipt(int id)
@@ -47,9 +56,57 @@ namespace StockService.Controllers
             }
         }
 
+        [Route("GetReceiptDetail/{id}")]
+        [HttpGet]
+        public IActionResult GetReceiptDetail(int id)
+        {
+            try
+            {
+                var target = _service_detail.GetMulti(c => c.ReceiptID == id);
+
+                if (target == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(target);
+                }        
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [Route("CreateReceipt")]
+        [HttpPost]
+        public IActionResult CreateReceipt([FromBody]JObject data)
+        {
+            
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            Receipt model = data["receipt"].ToObject<Receipt>();
+            _service.Add(model);
+            return Ok(model);
+        }
+
+        [Route("CreateReceiptDetail")]
+        [HttpPost]
+        public IActionResult CreateReceiptDetail([FromBody]JObject data)
+        {
+            
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+             ReceiptDetail model_item = data.ToObject<ReceiptDetail>();
+            _service_detail.Add(model_item);
+            return Ok(model_item);
+        }
+
         [HttpPost]
         public IActionResult Create([FromBody]JObject data)
         {
+            
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             Receipt model = data["receipt"].ToObject<Receipt>();
@@ -58,6 +115,7 @@ namespace StockService.Controllers
             foreach (var item in list_item)
             {
                 ReceiptDetail model_item = item.ToObject<ReceiptDetail>();
+                model_item.ReceiptID = model.Id;
                 _service_detail.Add(model_item);
             }
             
@@ -105,17 +163,17 @@ namespace StockService.Controllers
             return Ok();
         }
 
-        // [HttpDelete("{id}")]
-        // public IActionResult Delete(int id)
-        // {
-        //     var Receipt = _service.GetSingleById(id);
-        //     if (Receipt == null)
-        //     {
-        //         return NotFound();
-        //     }
-        //     Receipt.State = 1;
-        //     _service.Update(Receipt);
-        //     return Ok(Receipt);
-        // }
+        [Route("DelReceiptDatail")]
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var receiptDetail = _service_detail.GetSingleById(id);
+            if (receiptDetail == null)
+            {
+                return NotFound();
+            }
+            _service_detail.Delete(receiptDetail);
+            return Ok();
+        }
     }
 }

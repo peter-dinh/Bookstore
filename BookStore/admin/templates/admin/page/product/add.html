@@ -16,12 +16,13 @@ Thêm sản phẩm
 </div>
 {% endblock %}
 {% block content %}
+<form method="post" enctype="multipart/form-data" action="{% url 'add_product' %}">
 <div class="row">
     <div class="col-lg-12 ">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
                 <div class="panel-heading-title pull-left">
-                    <h6>Thông tin phiếu nhập</h6>
+                    <h6>Thông tin sản phẩm</h6>
                 </div>
                 <!--panel-heading-title-->
                 <div class="panel-heading-buttons pull-right">
@@ -35,54 +36,64 @@ Thêm sản phẩm
             <div class="panel-body">
                 <div class="col-lg-6">
                     <div class="row inputWrapper ">
-                        <label>Sản phẩm</label>
+                        <label>Tên sản phẩm</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="text" class="form-control" name="inputName" >
+                        </div>
+                    </div>
+                    <div class="row inputWrapper ">
+                        <label>Ngôn ngữ</label>
+                        <br/>
+                        <div class="col-md-12 bold">
+                            <input type="text" class="form-control" name="inputLanguge" >
                         </div>
                     </div>
                     <div class="row inputWrapper ">
                         <label>Giá</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="number" class="form-control" name="inputPrice" >
                         </div>
                     </div>
                     <div class="row inputWrapper ">
-                        <label>Số lượng</label>
+                        <label>Giảm giá (%)</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="number" class="form-control" name="inputDiscount" max="100" min="0">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row inputWrapper ">
-                        <label>Tên đại lý</label>
+                        <label>Tác giả</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="text" class="form-control" name="inputAuthor" >
                         </div>
                     </div>
                     <div class="row inputWrapper ">
-                        <label>Số điện thoại đại lý</label>
+                        <label>Đã bán</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="number" class="form-control" name="inputBought" disabled="disabled" />
                         </div>
                     </div>
                     <div class="row inputWrapper ">
-                        <label>Địa chỉ đại lý</label>
+                        <label>Trạng thái</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <input type="text" class="form-control" name="inputIs_Active" disabled="disabled"/>
                         </div>
                     </div>
+                </div>
+                <div style="clear: both;" ></div>
+                <div class="col-lg-12">
                     <div class="row inputWrapper ">
-                        <label>Email</label>
+                        <label>Chi tiết</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <textarea class="form-control" name="inputDetail"></textarea>
                         </div>
                     </div>
                 </div>
@@ -103,49 +114,17 @@ Thêm sản phẩm
                     <br>
                     <br>
                     <div class="row inputWrapper ">
-                        <label>Email</label>
+                        <label>Thể loại</label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <input type="text" class="form-control" >
+                            <select class="form-control" id="list_cateogry">
+                                {% for item in category %}
+                                <option value="{{item.id}}">{{ item.categoryName }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                     </div>
-                    <div class="row inputWrapper ">
-                        <label></label>
-                        <br/>
-                        <div class="col-md-12 bold">
-                            <button class="btn-primary btn">Thêm thể loại</button>
-                        </div>
-                    </div>
-                    <br />
-                    <br />
-                    <div class="dataTableWrapper">
-                        <table class="table tableTheme">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Tên sản phẩm</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Mar erte tett ksdf wer d gs a fge</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    
                 </div>
                 <div class="col-lg-6">
                     <div class="panel-heading-title pull-left">
@@ -157,13 +136,12 @@ Thêm sản phẩm
                         <label></label>
                         <br/>
                         <div class="col-md-12 bold">
-                            <button class="btn-primary btn">Thêm hình ảnh</button>
+                            <input type="file" name="inputFile" class="form-control" />
                         </div>
                     </div>
                     <br />
                     <br />
-                    <div class="dataTableWrapper">
-                       
+                    <div class="col-lg-12" id="value_image">
                     </div>
                 </div>
             </div>
@@ -172,11 +150,14 @@ Thêm sản phẩm
 </div>
 <div class="row">
     <div class="col-lg-12">
+        <button class="btn btn-success" type="submit">Thêm mới</button>
         <a class="btn btn-primary">Trở về</a>
     </div>
 </div>
+</form>
 {% endblock %}
 
 {% block js %}
 <script type="text/javascript" src="{% static 'admin/js/functions.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/src/product.js' %}"></script>
 {% endblock %}

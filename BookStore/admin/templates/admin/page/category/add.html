@@ -19,6 +19,7 @@ Thêm thể loại
 {% block content %}
 <div class="row">
     <div class="col-lg-12 ">
+        <form action="{% url 'add_category' %}" method="post">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
                 <div class="panel-heading-title pull-left">
@@ -38,14 +39,15 @@ Thêm thể loại
                     <label>Tên thể loại:</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="inputName">
                     </div>
                 </div>
             </div>
         </div>
         <br />
-        <button type="button" class="btn btn-primary">Thêm thể loại</button>
+        <button type="submit" class="btn btn-primary">Thêm thể loại</button>
         <!--panel-body-->
+        </form>
     </div>
 </div>
 {% endblock %}

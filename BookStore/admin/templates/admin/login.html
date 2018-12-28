@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,14 +9,14 @@
 	<meta name="description" content="bootstrap admin template">
 	<meta name="author" content="">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>BookStore | Login</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/scss/style.css" rel="stylesheet" type="text/css">
-	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<title>BookStore | Đăng nhập</title>
+	<link href="{% static 'admin/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'admin/css/scss/style.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'admin/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 	<!-- BUTTONS EFFECT -->
-	<link href="lib/waves/waves.css" rel="stylesheet" type="text/css">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href="{% static 'admin/lib/waves/waves.css' %}" rel="stylesheet" type="text/css">
+	<link rel="icon" href="{% static 'admin/img/favicon.ico' %}" type="image/x-icon" />
+	<link rel="shortcut icon" href="{% static 'admin/img/favicon.ico' %}" type="image/x-icon" />
 	<!-- Bootstrap -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,17 +29,18 @@
 
 <body>
 	<div class="registrationWrapper clearfix">
-		<div class="registrationContent">
+		<form class="registrationContent" action="{% url 'login' %}" method="post">
 			<div class="registrationHeader">
-				<h1>Login</h1>
+				<h1>Đăng nhập</h1>
 			</div>
+			{% include 'admin/snippets/message_flash.html' %}
 			<!--registrationHeader-->
 			<br>
 			<div class="row inputWrapper ">
 				<div class="col-md-12">
 					<div class="left-inner-addon ">
 						<i class="fa fa-envelope"></i>
-						<input type="text" class="form-control" placeholder="E-mail">
+						<input type="text" class="form-control" name="inputEmail" placeholder="E-mail">
 					</div>
 				</div>
 				<br>
@@ -47,7 +49,7 @@
 				<div class="col-md-12 ">
 					<div class="left-inner-addon ">
 						<i class="fa fa-key"></i>
-						<input type="text" class="form-control" placeholder="Password">
+						<input type="password" class="form-control" name="inputPassword" placeholder="Mật khẩu">
 					</div>
 				</div>
 				<br>
@@ -56,17 +58,18 @@
 
 			</div>
 			<div class="registrationButtonPlaseholder">
-				<button type="button" class="btn btn-info btn-df float-button-light">Login</button>
+				<button type="submit" class="btn btn-info btn-df float-button-light">Đang nhập</button>
 			</div>
 			<!--registrationButtonPlaseholder-->
-		</div>
+		</form>
 		<!--registrationContent-->
 	</div>
 	<!--registrationWrapper-->
 
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="lib/waves/waves.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{% static 'admin/js/jquery-1.11.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'admin/lib/waves/waves.min.js' %}"></script>
+	<script src="{% static 'admin/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'admin/src/login.js' %}"></script>
 	<script>
 		Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
 		Waves.init();

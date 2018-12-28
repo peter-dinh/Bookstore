@@ -29,9 +29,24 @@ namespace StockService.Controllers
             return Ok(model);
         }
         
-        [HttpPost]
-        public IActionResult Create([FromBody]Product model)
+        [HttpGet("{id}")]
+        public IActionResult GetProduct(int id)
         {
+            var target = _service.GetSingleById(id);
+            if (target == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(target);
+            }      
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody]JObject json)
+        {
+            Product model = json.ToObject<Product>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             _service.Add(model);
@@ -39,8 +54,9 @@ namespace StockService.Controllers
         }
         
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Product model)
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Product model = json.ToObject<Product>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Category = _service.GetSingleById(id);

@@ -14,7 +14,6 @@ namespace ProductService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "0")]
     public class RatingController : ControllerBase
     {
         private readonly IRatingRepository _service;
@@ -23,6 +22,7 @@ namespace ProductService.Controllers
             _service = service;
         }
         // GET api/category
+        [Authorize(Roles = "1")]
         [Route("All")]
         [HttpGet]
         public IActionResult Get()
@@ -62,8 +62,10 @@ namespace ProductService.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]Rating model)
+        [Authorize(Roles = "0")]
+        public IActionResult Create([FromBody]JObject json)
         {
+            Rating model = json.ToObject<Rating>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             _service.Add(model);
@@ -72,8 +74,10 @@ namespace ProductService.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Rating model)
+        [Authorize(Roles = "0")]
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Rating model = json.ToObject<Rating>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Rating = _service.GetSingleById(id);

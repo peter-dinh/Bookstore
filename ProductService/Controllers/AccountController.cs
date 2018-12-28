@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
 
 namespace ProductService.Controllers
 {
@@ -25,17 +26,43 @@ namespace ProductService.Controllers
             _service = service;
         }
         
-        // GET api/category
+        [Authorize(Roles = "1")]
         [Route("All")]
         [HttpGet]
-    
         public IActionResult Get()
         {
             var model = _service.GetAll();
             return Ok(model);
         }
 
-        // [Authorize(Roles = "1")]
+        [Route("CheckToken")]
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetInfoAccountToken()
+        {
+            try
+            {
+                var currentUser = HttpContext.User;
+                if (currentUser.HasClaim(c => c.Type == "Email"))
+                {
+                    var email = currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value;
+                    Account account = _service.GetSingleByCondition(c => c.Email == email);
+                    if (account != null){
+                        return Ok(new
+                        {
+                            email = email,
+                            role = account.AccountType
+                        });
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+            return BadRequest();
+        }
+
         [Route("GetAvailable")]
         [HttpGet]
         public IActionResult GetAvailable()
@@ -44,14 +71,13 @@ namespace ProductService.Controllers
             return Ok(model);
         }
 
-        [Authorize(Roles = "1")]
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetAccount(int id)
         {
             try
             {
                 var target = _service.GetSingleById(id);
-
                 if (target == null)
                 {
                     return NotFound();
@@ -67,14 +93,20 @@ namespace ProductService.Controllers
             }
         }
 
+        
         [Route("login")]
+        [AllowAnonymous]
         [HttpPost]
-
-        public IActionResult Login([FromBody]Login data)
+        public IActionResult Login([FromBody]JObject json)
         {
-            
+            Login data = json.ToObject<Login>();
             var account = _service.GetSingleByCondition(c => c.Email == data.Email && c.Password == Encryptor.MD5Hash(data.Password));
             if (account != null){
+                if (account.Lock == true)
+                {
+                    return BadRequest();
+                }
+
                 var claims = new []
                 {
                     new Claim("Email", account.Email),
@@ -100,8 +132,10 @@ namespace ProductService.Controllers
 
         [Route("register")]
         [HttpPost]
-        public IActionResult Register([FromBody]Account model)
+        [AllowAnonymous]
+        public IActionResult Register([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             model.Password = Encryptor.MD5Hash(model.Password);
@@ -112,8 +146,9 @@ namespace ProductService.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]Account model)
+        public IActionResult Create([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             model.Password = Encryptor.MD5Hash(model.Password);
@@ -124,8 +159,9 @@ namespace ProductService.Controllers
 
         [Authorize(Roles = "1")]
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Account model)
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Account = _service.GetSingleById(id);

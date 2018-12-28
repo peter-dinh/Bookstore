@@ -22,7 +22,7 @@ Xem tài khoản
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
                 <div class="panel-heading-title pull-left">
-                    <h6>Sửa thể loại</h6>
+                    <h6>Thông tin tài khoản</h6>
                 </div>
                 <!--panel-heading-title-->
                 <div class="panel-heading-buttons pull-right">
@@ -35,43 +35,55 @@ Xem tài khoản
             <!--panel-->
             <div class="panel-body">
                 <div class="row inputWrapper ">
-                    <label>Tên tài khoản:</label>
-                    <br/>
-                    <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
-                    </div>
-                </div>
-                <div class="row inputWrapper ">
                     <label>Email:</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" value="{{ data.email }}" disabled="disabled" />
                     </div>
                 </div>
                 <div class="row inputWrapper ">
                     <label>Địa chỉ</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" value="{{ data.address }}" disabled="disabled" />
                     </div>
                 </div>
                 <div class="row inputWrapper ">
                     <label>Điện thoại</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" value="{{ data.phone }}" disabled="disabled" />
                     </div>
                 </div>
                 <div class="row inputWrapper ">
                     <label>Loại tài khoản</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" value="{% if data.accountType == 1 %} Admin {% else %} Khách hàng {% endif %}" disabled="disabled" />
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Ngày tạo</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" value="{{ data.created }}" disabled="disabled" />
+                    </div>
+                </div>
+                <div class="row inputWrapper ">
+                    <label>Trạng thái</label>
+                    <br/>
+                    <div class="col-md-12 bold">
+                        <input type="text" class="form-control" value="{% if data.lock == 1 %} Bị khóa {% else %} Hoạt động {% endif %}" disabled="disabled" />
                     </div>
                 </div>
             </div>
         </div>
         <br />
+        {% if data.lock == 1 %} 
+        <a class="btn btn-success" href="/admin/unlock/{{data.id}}">Mở khóa</a>
+        {% else %}
+        <a class="btn btn-danger" href="/admin/lock/{{data.id}}">Khóa tài khoản</a>
+        {% endif %}
         <a class="btn btn-primary">Trở về</a>
         <!--panel-body-->
     </div>

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProductService.Repository;
 using ProductService.Infastructure;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
 
 /*
 {
@@ -50,6 +51,7 @@ namespace ProductService.Controllers
 
         [Route("GetAvailable")]
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult GetAvailable()
         {
             var model = _service.GetMulti(c => c.Archive == false);
@@ -69,6 +71,9 @@ namespace ProductService.Controllers
                 }
                 else
                 {
+                    if (target.Archive == true){
+                        return NotFound();
+                    }
                     return Ok(target);
                 }        
             }
@@ -80,8 +85,9 @@ namespace ProductService.Controllers
 
         [HttpPost]
         [Authorize(Roles = "1")]
-        public IActionResult Create([FromBody]Category model)
+        public IActionResult Create([FromBody]JObject json)
         {
+            Category model = json.ToObject<Category>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             _service.Add(model);
@@ -91,8 +97,9 @@ namespace ProductService.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "1")]
-        public IActionResult Update(int id, [FromBody]Category model)
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Category model = json.ToObject<Category>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Category = _service.GetSingleById(id);
@@ -112,6 +119,9 @@ namespace ProductService.Controllers
             var Category = _service.GetSingleById(id);
             if (Category == null)
             {
+                return NotFound();
+            }
+            if (Category.Archive == true){
                 return NotFound();
             }
             Category.Archive = true;

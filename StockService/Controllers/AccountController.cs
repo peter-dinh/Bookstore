@@ -10,6 +10,8 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
 
 namespace StockService.Controllers
 {
@@ -23,7 +25,7 @@ namespace StockService.Controllers
             _service = service;
         }
         
-
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetAccount(int id)
         {
@@ -45,11 +47,48 @@ namespace StockService.Controllers
                 return BadRequest(ex);
             }
         }
-        public IActionResult Login([FromBody]Login data)
+
+        [Route("CheckToken")]
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetInfoAccountToken()
         {
-            
+            try
+            {
+                var currentUser = HttpContext.User;
+                if (currentUser.HasClaim(c => c.Type == "Email"))
+                {
+                    var email = currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value;
+                    Account account = _service.GetSingleByCondition(c => c.Email == email);
+                    if (account != null){
+                        return Ok(new
+                        {
+                            email = email,
+                            role = account.AccountType
+                        });
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+            return BadRequest();
+        }
+
+        [Route("login")]
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Login([FromBody]JObject json)
+        {
+            Login data = json.ToObject<Login>();
             var account = _service.GetSingleByCondition(c => c.Email == data.Email && c.Password == Encryptor.MD5Hash(data.Password));
             if (account != null){
+                if (account.Lock == true)
+                {
+                    return BadRequest();
+                }
+
                 var claims = new []
                 {
                     new Claim("Email", account.Email),
@@ -75,8 +114,10 @@ namespace StockService.Controllers
 
         [Route("register")]
         [HttpPost]
-        public IActionResult Register([FromBody]Account model)
+        [AllowAnonymous]
+        public IActionResult Register([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             model.Password = Encryptor.MD5Hash(model.Password);
@@ -86,19 +127,24 @@ namespace StockService.Controllers
             return Ok(model);
         }
 
+
         [HttpPost]
-        public IActionResult Create([FromBody]Account model)
+        public IActionResult Create([FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+            model.Password = Encryptor.MD5Hash(model.Password);
+            model.Created = Convert.ToDateTime(model.Created);
             _service.Add(model);
             return Ok(model);
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody]Account model)
+        public IActionResult Update(int id, [FromBody]JObject json)
         {
+            Account model = json.ToObject<Account>();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var Account = _service.GetSingleById(id);
@@ -112,6 +158,7 @@ namespace StockService.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int id)
         {
             var Account = _service.GetSingleById(id);

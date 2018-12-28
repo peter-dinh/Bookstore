@@ -19,6 +19,7 @@ Sửa thể loại
 {% block content %}
 <div class="row">
     <div class="col-lg-12 ">
+    <form action="{% url 'edit_category' data.id %}" method="post">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
                 <div class="panel-heading-title pull-left">
@@ -38,21 +39,22 @@ Sửa thể loại
                     <label>Tên thể loại:</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" value="{{ data.categoryName }}" name="inputName" />
                     </div>
                 </div>
                 <div class="row inputWrapper ">
-                    <label>Hiển thị:</label>
+                    <label>Số lượng sản phẩm:</label>
                     <br/>
                     <div class="col-md-12 bold">
-                        <select class="form-control">
+                        <input type="text" class="form-control" value="{{ data.quantity }}" disabled="disabled" />
                     </div>
                 </div>
             </div>
         </div>
         <br />
-        <button type="button" class="btn btn-primary">Sửa thể loại</button>
+        <button type="submit" class="btn btn-primary">Sửa thể loại</button>
         <!--panel-body-->
+    </from>
     </div>
 </div>
 {% endblock %}
