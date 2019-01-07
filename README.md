@@ -41,7 +41,7 @@
 
 ### 6 Giao diện người dùng
 > **Giao diện người dùng gồm**: giao diện bán hàng (Website) và giao diện quản lý (Admin)
-####Giao diện Bán hàng (Website):
+#### Giao diện Bán hàng (Website):
 * **Trang chủ**: Hiển thị các sản phẩm nổi bật, bán chạy trong hệ thống
 * **Trang thể loại**: Hiển thị danh sách sản phẩm thuộc cùng 1 thể loại. Sử dụng phân trang.
 * **Trang chi tiết sản phẩm**: Hiển thị thông tin sản phẩm, xuất ra danh sách sản phẩm liên quan. Có khu vực đánh giá sản phẩm
@@ -50,7 +50,7 @@
 * **Trang thanh toán**: Hiện thị form thông tin khách hàng cùng số tiền cần phải trả cho giỏ hàng.
 * **Trang thông tin cá nhân**: Hiện thị thông tin cá nhân của khách hàng. Hiển thị form đổi mật khẩu tài khoản
 * **Trang Lịch sử mua hàng**: Hiển thị các đơn hàng đã mua của khách hàng
-Giao diện quản lý (Admin)
+#### Giao diện quản lý (Admin)
 * **Trang chủ**: Hiển thị số liệu bán hàng, doanh số bán hàng theo thời gian.
 * **Các trang thêm sửa khóa tài khoản**
 * **Các trang thêm sửa ngừng bán sản phẩm**
