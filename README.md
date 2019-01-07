@@ -2,7 +2,7 @@
 
 ### Yêu cầu về công nghệ:
 
-| First Header  | Second Header |
+| Yêu cầu  | Giải pháp |
 | ------------- | ------------- |
 | Thời gian triển khai  | 4 tuần (từ tuần 13 - 16) |
 | Số lượng service  | 4  |
@@ -12,7 +12,7 @@
 
 
 ### 1 Yêu cầu:
-> Tạo 1 website bán sách. Cho phép đăng nhập đăng ký tài khoản khách hàng để mua sản phẩm. Mỗi sản phẩm được phân loại theo thể loại để người mua dễ dàng tìm kiếm. Một sản phẩm cho phép có nhiều thể loại. Hỗ trợ chức năng giảm giá. Có chức năng quản lý số lượng sản phẩm, thông báo nhắc nhở khi số lượng gần hết hoặc đã hết. Hỗ trợ giỏ hàng và thanh toán. Cho phép khách hàng đánh giá sản phẩm. Hỗ trợ các chức năng tìm kiếm, lọc giá sản phẩm.
+> **Tạo 1 website bán sách. Cho phép đăng nhập đăng ký tài khoản khách hàng để mua sản phẩm. Mỗi sản phẩm được phân loại theo thể loại để người mua dễ dàng tìm kiếm. Một sản phẩm cho phép có nhiều thể loại. Hỗ trợ chức năng giảm giá. Có chức năng quản lý số lượng sản phẩm, thông báo nhắc nhở khi số lượng gần hết hoặc đã hết. Hỗ trợ giỏ hàng và thanh toán. Cho phép khách hàng đánh giá sản phẩm. Hỗ trợ các chức năng tìm kiếm, lọc giá sản phẩm.**
 ### 2 Chức năng hệ thống:
 * **Cửa hàng theo mô hình B2C**: Website cần có 2 phần giao diện người dùng gồm: Admin và Khách hàng. 2 Giao diện tách bạch nhau nhưng có đường dẫn liên kết với nhau.
 * **Tài khoản**: Yêu cầu bảo mật về thông tin tài khoản, mật khẩu, token, ... Cho phép được khóa tài khoản khách hàng. Có khu vực đăng nhập, đăng ký tài khoản khách hàng
@@ -25,7 +25,7 @@
 * **Thống kê báo cáo doanh số bán hàng, số lượng sản phẩm bán, tồn kho, ...**
 
 ### 3 Đối tượng người dùng
-> Gồm 2 đối tượng: Admin và Khách hàng
+> **Gồm 2 đối tượng: Admin và Khách hàng**
 
 ### 4 Phân chia Service
 * Phân chia theo chức năng, hệ thống gồm có 3 Service: **Product Service**, **Order Service**, **Stock Service**. Mỗi service hoạt động độc lập, không phụ thuộc với nhau
@@ -33,8 +33,11 @@
 
 ### 5 Thiết kế Cơ sở dữ liệu
 #### Product Service:
+![Product Service](https://github.com/peter-dinh/Bookstore/blob/master/doc/image/Product.png "Product Service")
 #### Order Service:
+![Order Service](https://github.com/peter-dinh/Bookstore/blob/master/doc/image/Order.png "Order Service")
 #### Stock service:
+![Stock Service](https://github.com/peter-dinh/Bookstore/blob/master/doc/image/Stock.png "Stock Service")
 
 ### 6 Giao diện người dùng
 > **Giao diện người dùng gồm**: giao diện bán hàng (Website) và giao diện quản lý (Admin)
@@ -58,7 +61,7 @@ Giao diện quản lý (Admin)
 * **Các trang thêm sửa xóa phiếu nhập**
 
 ### 7 Phân tích chức năng từng Service
-> Ba Service (Product, Order, Stock) đều được cài đặt chung 1 thư viện tạo Token. với thời hạn sử dụng 1 ngày. Ba thư viện này đều dùng chung 1 mã bí mật để giả mã. Mỗi khi tài khoản đăng nhập vào hệ thống. với email và password đã tạo. Hệ thống sẽ tạo chuỗi token cho user đăng nhập. và được lưu trữ trong session hoặc localStorage (browser)
+> **"Ba Service (Product, Order, Stock) đều được cài đặt chung 1 thư viện tạo Token. với thời hạn sử dụng 1 ngày. Ba thư viện này đều dùng chung 1 mã bí mật để giả mã. Mỗi khi tài khoản đăng nhập vào hệ thống. với email và password đã tạo. Hệ thống sẽ tạo chuỗi token cho user đăng nhập. và được lưu trữ trong session hoặc localStorage (browser)"**
 
 #### Service Product: Sử dụng (ASP.NET Core + Entity Core)
 * Quản lý sản phẩm
